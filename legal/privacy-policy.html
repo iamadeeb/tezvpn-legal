@@ -56,6 +56,142 @@ var APPS = {
   dns: { name: "Tez DNS", logo: "../appicon.png" }
 };
 var DOCS = {
+  "id": {
+    label: "Bahasa Indonesia",
+    dir: "ltr",
+    title: "Kebijakan Privasi",
+    updated: "Terakhir Diperbarui: 15 November 2025",
+    tech: {
+      vpn: `<p>{{APP}} memproses DNS dan aturan jaringan secara lokal di perangkat Anda melalui <strong>VpnService</strong> Android. Kami tidak mengalihkan lalu lintas ke server eksternal — {{APP}} adalah terowongan lokal bergaya DNS.</p>`,
+      dns: `<p>{{APP}} menerapkan server DNS pilihan Anda secara lokal di perangkat melalui kerangka kerja <strong>Network Extension</strong> milik Apple. Kami tidak mengalihkan lalu lintas ke server eksternal — hanya resolver DNS perangkat Anda yang berubah.</p>`,
+    },
+    body: `
+
+<p>Selamat datang di {{APP}}! Kebijakan Privasi ini menjelaskan bagaimana {{APP}} ("kami") mengumpulkan, menggunakan, dan melindungi informasi Anda saat menggunakan aplikasi kami ("Aplikasi"). {{APP}} dirancang dengan mengutamakan privasi dan menerapkan kebijakan tanpa pencatatan log yang ketat.</p>
+
+<h2>1. Informasi yang Tidak Kami Kumpulkan</h2>
+<p>{{APP}} adalah layanan yang berfokus pada privasi. Kami <strong>tidak</strong> mengumpulkan atau menyimpan hal berikut:</p>
+<ul>
+    <li><strong>Tidak ada riwayat penjelajahan</strong></li>
+    <li><strong>Tidak ada kueri DNS</strong></li>
+    <li><strong>Tidak ada log koneksi</strong> (tanpa stempel waktu, durasi sesi, atau IP yang diberikan)</li>
+    <li><strong>Tidak ada aktivitas daring</strong></li>
+    <li><strong>Tidak ada alamat IP</strong> (baik IP asli Anda maupun IP yang diberikan)</li>
+    <li><strong>Tidak ada identitas pribadi</strong> seperti nama, email, nomor telepon</li>
+</ul>
+
+<h2>2. Informasi yang Dikumpulkan Otomatis</h2>
+<p>Agar Aplikasi berjalan lancar, kami dapat mengumpulkan informasi teknis anonim seminimal mungkin:</p>
+<ul>
+    <li><strong>Informasi Perangkat:</strong> model perangkat anonim, versi OS.</li>
+    <li><strong>Data Kerusakan:</strong> melalui Firebase Crashlytics untuk mendeteksi dan memperbaiki masalah. Laporan kerusakan tidak memuat data pribadi.</li>
+    <li><strong>Peristiwa Penggunaan:</strong> data anonim dasar untuk meningkatkan performa layanan.</li>
+</ul>
+
+<h3>Data Tidak Meninggalkan Perangkat Anda</h3>
+{{TECH}}
+
+<h2>3. Cara Kami Menggunakan Informasi</h2>
+<p>Informasi anonim terbatas yang kami kumpulkan hanya digunakan untuk:</p>
+<ul>
+    <li>Memastikan Aplikasi berfungsi dengan benar</li>
+    <li>Mendiagnosis bug dan kerusakan</li>
+    <li>Meningkatkan performa dan stabilitas</li>
+</ul>
+
+<h2>4. Layanan Pihak Ketiga</h2>
+<p>Kami menggunakan SDK pihak ketiga berikut:</p>
+<ul>
+    <li><strong>Google AdMob:</strong> untuk menampilkan iklan. AdMob dapat mengumpulkan data performa iklan anonim.</li>
+    <li><strong>Firebase Crashlytics:</strong> untuk mendiagnosis masalah teknis.</li>
+</ul>
+<p>Layanan tersebut dapat mengumpulkan pengenal anonim sesuai kebijakan privasi masing-masing. {{APP}} tidak membagikan data pengguna melebihi apa yang dikumpulkan SDK mereka secara otomatis.</p>
+
+<h2>5. Keamanan Data</h2>
+<p>Kami menerapkan langkah-langkah standar industri untuk melindungi data Anda. Karena {{APP}} tidak menyimpan log atau data pribadi, risikonya sangat kecil.</p>
+
+<h2>6. Privasi Anak</h2>
+<p>{{APP}} tidak ditujukan untuk anak di bawah 13 tahun. Kami tidak dengan sengaja mengumpulkan informasi pribadi dari anak-anak.</p>
+
+<h2>7. Perubahan Kebijakan Ini</h2>
+<p>Kami dapat memperbarui Kebijakan Privasi ini sewaktu-waktu. Jika ada perubahan, kami akan memperbarui tanggal "Terakhir Diperbarui" di bagian atas.</p>
+
+<div class="contact-info">
+    <h2>8. Hubungi Kami</h2>
+    <p>Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini, hubungi kami di:</p>
+    <p><strong>Email:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+</div>
+
+`
+  },
+  "de": {
+    label: "Deutsch",
+    dir: "ltr",
+    title: "Datenschutzrichtlinie",
+    updated: "Zuletzt aktualisiert: 15. November 2025",
+    tech: {
+      vpn: `<p>{{APP}} verarbeitet DNS- und Netzwerkregeln lokal auf deinem Gerät über den <strong>VpnService</strong> von Android. Wir leiten keinen Datenverkehr an externe Server um — {{APP}} ist ein lokaler Tunnel im DNS-Stil.</p>`,
+      dns: `<p>{{APP}} wendet die von dir gewählten DNS-Server lokal auf deinem Gerät über Apples <strong>Network Extension</strong>-Framework an. Wir leiten keinen Datenverkehr an externe Server um — es ändert sich nur der DNS-Resolver, den dein Gerät abfragt.</p>`,
+    },
+    body: `
+
+<p>Willkommen bei {{APP}}! Diese Datenschutzrichtlinie erklärt, wie {{APP}} („wir“) deine Informationen erhebt, verwendet und schützt, wenn du unsere mobile Anwendung (die „App“) nutzt. {{APP}} wurde mit Blick auf den Datenschutz entwickelt und verfolgt eine strikte No-Logs-Richtlinie.</p>
+
+<h2>1. Daten, die wir nicht erheben</h2>
+<p>{{APP}} ist ein datenschutzorientierter Dienst. Wir erheben und speichern <strong>keine</strong> der folgenden Daten:</p>
+<ul>
+    <li><strong>Kein Browserverlauf</strong></li>
+    <li><strong>Keine DNS-Anfragen</strong></li>
+    <li><strong>Keine Verbindungsprotokolle</strong> (keine Zeitstempel, Sitzungsdauer oder zugewiesene IP)</li>
+    <li><strong>Keine Online-Aktivitäten</strong></li>
+    <li><strong>Keine IP-Adressen</strong> (weder deine ursprüngliche noch eine zugewiesene IP)</li>
+    <li><strong>Keine persönlichen Kennungen</strong> wie Name, E-Mail oder Telefonnummer</li>
+</ul>
+
+<h2>2. Automatisch erhobene Daten</h2>
+<p>Damit die App reibungslos läuft, erheben wir möglicherweise ein Minimum an anonymen technischen Daten:</p>
+<ul>
+    <li><strong>Geräteinformationen:</strong> anonymes Gerätemodell, Betriebssystemversion.</li>
+    <li><strong>Absturzdaten:</strong> über Firebase Crashlytics zur Erkennung und Behebung von Problemen. Absturzberichte enthalten keine personenbezogenen Daten.</li>
+    <li><strong>Nutzungsereignisse:</strong> grundlegende anonyme Daten zur Verbesserung der Leistung.</li>
+</ul>
+
+<h3>Keine Daten verlassen dein Gerät</h3>
+{{TECH}}
+
+<h2>3. Wie wir die Daten verwenden</h2>
+<p>Die begrenzten anonymen Daten verwenden wir ausschließlich für:</p>
+<ul>
+    <li>die korrekte Funktion der App</li>
+    <li>die Diagnose von Fehlern und Abstürzen</li>
+    <li>die Verbesserung von Leistung und Stabilität</li>
+</ul>
+
+<h2>4. Dienste von Drittanbietern</h2>
+<p>Wir nutzen die folgenden Drittanbieter-SDKs:</p>
+<ul>
+    <li><strong>Google AdMob:</strong> zur Anzeige von Werbung. AdMob kann anonyme Daten zur Werbeleistung erheben.</li>
+    <li><strong>Firebase Crashlytics:</strong> zur Diagnose technischer Probleme.</li>
+</ul>
+<p>Diese Dienste können gemäß ihren eigenen Datenschutzrichtlinien anonyme Kennungen erheben. {{APP}} gibt darüber hinaus keine Nutzerdaten weiter.</p>
+
+<h2>5. Datensicherheit</h2>
+<p>Wir setzen branchenübliche Maßnahmen zum Schutz deiner Daten ein. Da {{APP}} keine Protokolle oder personenbezogenen Daten speichert, ist das Risiko minimal.</p>
+
+<h2>6. Datenschutz für Kinder</h2>
+<p>{{APP}} richtet sich nicht an Kinder unter 13 Jahren. Wir erheben wissentlich keine personenbezogenen Daten von Kindern.</p>
+
+<h2>7. Änderungen dieser Richtlinie</h2>
+<p>Wir können diese Datenschutzrichtlinie gelegentlich aktualisieren. Bei Änderungen aktualisieren wir das Datum „Zuletzt aktualisiert“ oben auf der Seite.</p>
+
+<div class="contact-info">
+    <h2>8. Kontakt</h2>
+    <p>Bei Fragen zu dieser Datenschutzrichtlinie erreichst du uns unter:</p>
+    <p><strong>E-Mail:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+</div>
+
+`
+  },
   "en": {
     label: "English",
     dir: "ltr",
@@ -120,6 +256,470 @@ var DOCS = {
                 <p>If you have any questions about this Privacy Policy, please contact us at:</p>
                 <p><strong>Email:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
             </div>
+`
+  },
+  "es": {
+    label: "Español",
+    dir: "ltr",
+    title: "Política de Privacidad",
+    updated: "Última actualización: 15 de noviembre de 2025",
+    tech: {
+      vpn: `<p>{{APP}} procesa las reglas de DNS y de red localmente en tu dispositivo mediante <strong>VpnService</strong> de Android. No redirigimos el tráfico a servidores externos: {{APP}} es un túnel local de tipo DNS.</p>`,
+      dns: `<p>{{APP}} aplica los servidores DNS que elijas localmente en tu dispositivo mediante el framework <strong>Network Extension</strong> de Apple. No redirigimos el tráfico a servidores externos: solo cambia el resolutor DNS que consulta tu dispositivo.</p>`,
+    },
+    body: `
+
+<p>¡Bienvenido a {{APP}}! Esta Política de Privacidad explica cómo {{APP}} ("nosotros") recopila, usa y protege tu información cuando utilizas nuestra aplicación móvil (la "App"). {{APP}} se ha diseñado pensando en la privacidad y aplica una estricta política de no registros.</p>
+
+<h2>1. Información que no recopilamos</h2>
+<p>{{APP}} es un servicio centrado en la privacidad. <strong>No</strong> recopilamos ni almacenamos nada de lo siguiente:</p>
+<ul>
+    <li><strong>Sin historial de navegación</strong></li>
+    <li><strong>Sin consultas DNS</strong></li>
+    <li><strong>Sin registros de conexión</strong> (ni marcas de tiempo, ni duración de sesión, ni IP asignada)</li>
+    <li><strong>Sin actividad en línea</strong></li>
+    <li><strong>Sin direcciones IP</strong> (ni tu IP original ni ninguna IP asignada)</li>
+    <li><strong>Sin identificadores personales</strong> como nombre, correo o teléfono</li>
+</ul>
+
+<h2>2. Información que recopilamos automáticamente</h2>
+<p>Para que la App funcione correctamente, podemos recopilar información técnica anónima mínima:</p>
+<ul>
+    <li><strong>Información del dispositivo:</strong> modelo anónimo y versión del sistema operativo.</li>
+    <li><strong>Datos de fallos:</strong> mediante Firebase Crashlytics para detectar y corregir problemas. Los informes de fallos no contienen datos personales.</li>
+    <li><strong>Eventos de uso:</strong> datos anónimos básicos para mejorar el rendimiento del servicio.</li>
+</ul>
+
+<h3>Ningún dato sale de tu dispositivo</h3>
+{{TECH}}
+
+<h2>3. Cómo usamos la información</h2>
+<p>La información anónima y limitada que recopilamos se utiliza únicamente para:</p>
+<ul>
+    <li>Garantizar que la App funcione correctamente</li>
+    <li>Diagnosticar errores y fallos</li>
+    <li>Mejorar el rendimiento y la estabilidad</li>
+</ul>
+
+<h2>4. Servicios de terceros</h2>
+<p>Utilizamos los siguientes SDK de terceros:</p>
+<ul>
+    <li><strong>Google AdMob:</strong> para mostrar anuncios. AdMob puede recopilar datos anónimos de rendimiento publicitario.</li>
+    <li><strong>Firebase Crashlytics:</strong> para diagnosticar problemas técnicos.</li>
+</ul>
+<p>Estos servicios pueden recopilar identificadores anónimos según sus propias políticas de privacidad. {{APP}} no comparte datos de usuarios más allá de lo que sus SDK recopilan automáticamente.</p>
+
+<h2>5. Seguridad de los datos</h2>
+<p>Aplicamos medidas conformes al estándar del sector para proteger tus datos. Dado que {{APP}} no almacena registros ni datos personales, el riesgo de exposición es mínimo.</p>
+
+<h2>6. Privacidad de los menores</h2>
+<p>{{APP}} no está dirigida a menores de 13 años. No recopilamos conscientemente información personal de menores.</p>
+
+<h2>7. Cambios en esta Política</h2>
+<p>Podemos actualizar esta Política de Privacidad ocasionalmente. Cuando haya cambios, actualizaremos la fecha de "Última actualización" en la parte superior.</p>
+
+<div class="contact-info">
+    <h2>8. Contacto</h2>
+    <p>Si tienes preguntas sobre esta Política de Privacidad, escríbenos a:</p>
+    <p><strong>Correo electrónico:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+</div>
+
+`
+  },
+  "fr": {
+    label: "Français",
+    dir: "ltr",
+    title: "Politique de confidentialité",
+    updated: "Dernière mise à jour : 15 novembre 2025",
+    tech: {
+      vpn: `<p>{{APP}} traite les règles DNS et réseau localement sur votre appareil via <strong>VpnService</strong> d’Android. Nous ne redirigeons pas le trafic vers des serveurs externes : {{APP}} est un tunnel local de type DNS.</p>`,
+      dns: `<p>{{APP}} applique les serveurs DNS que vous choisissez localement sur votre appareil via le framework <strong>Network Extension</strong> d’Apple. Nous ne redirigeons pas le trafic vers des serveurs externes : seul le résolveur DNS interrogé par votre appareil change.</p>`,
+    },
+    body: `
+
+<p>Bienvenue sur {{APP}} ! La présente Politique de confidentialité explique comment {{APP}} (« nous ») collecte, utilise et protège vos informations lorsque vous utilisez notre application mobile (l’« Application »). {{APP}} est conçue dans le respect de la vie privée et applique une politique stricte d’absence de journaux.</p>
+
+<h2>1. Informations que nous ne collectons pas</h2>
+<p>{{APP}} est un service axé sur la confidentialité. Nous ne collectons ni ne conservons <strong>aucun</strong> des éléments suivants :</p>
+<ul>
+    <li><strong>Aucun historique de navigation</strong></li>
+    <li><strong>Aucune requête DNS</strong></li>
+    <li><strong>Aucun journal de connexion</strong> (ni horodatage, ni durée de session, ni IP attribuée)</li>
+    <li><strong>Aucune activité en ligne</strong></li>
+    <li><strong>Aucune adresse IP</strong> (ni votre IP d’origine ni une IP attribuée)</li>
+    <li><strong>Aucun identifiant personnel</strong> tel que nom, e-mail ou numéro de téléphone</li>
+</ul>
+
+<h2>2. Informations collectées automatiquement</h2>
+<p>Pour assurer le bon fonctionnement de l’Application, nous pouvons collecter un minimum d’informations techniques anonymes :</p>
+<ul>
+    <li><strong>Informations sur l’appareil :</strong> modèle anonyme, version du système.</li>
+    <li><strong>Données de plantage :</strong> via Firebase Crashlytics afin de détecter et corriger les problèmes. Les rapports ne contiennent aucune donnée personnelle.</li>
+    <li><strong>Événements d’utilisation :</strong> données anonymes de base pour améliorer les performances.</li>
+</ul>
+
+<h3>Aucune donnée ne quitte votre appareil</h3>
+{{TECH}}
+
+<h2>3. Utilisation des informations</h2>
+<p>Les informations anonymes limitées que nous collectons servent uniquement à :</p>
+<ul>
+    <li>Assurer le bon fonctionnement de l’Application</li>
+    <li>Diagnostiquer les bogues et les plantages</li>
+    <li>Améliorer les performances et la stabilité</li>
+</ul>
+
+<h2>4. Services tiers</h2>
+<p>Nous utilisons les SDK tiers suivants :</p>
+<ul>
+    <li><strong>Google AdMob :</strong> pour afficher des publicités. AdMob peut collecter des données anonymes de performance publicitaire.</li>
+    <li><strong>Firebase Crashlytics :</strong> pour diagnostiquer les problèmes techniques.</li>
+</ul>
+<p>Ces services peuvent collecter des identifiants anonymes conformément à leurs propres politiques de confidentialité. {{APP}} ne partage aucune donnée utilisateur au-delà de ce que leurs SDK collectent automatiquement.</p>
+
+<h2>5. Sécurité des données</h2>
+<p>Nous appliquons des mesures conformes aux standards du secteur. {{APP}} ne conservant ni journaux ni données personnelles, le risque d’exposition est minime.</p>
+
+<h2>6. Confidentialité des enfants</h2>
+<p>{{APP}} ne s’adresse pas aux enfants de moins de 13 ans. Nous ne collectons pas sciemment d’informations personnelles auprès d’enfants.</p>
+
+<h2>7. Modifications de cette Politique</h2>
+<p>Nous pouvons mettre à jour cette Politique de temps à autre. En cas de modification, la date de « Dernière mise à jour » en haut de page sera actualisée.</p>
+
+<div class="contact-info">
+    <h2>8. Nous contacter</h2>
+    <p>Pour toute question concernant cette Politique de confidentialité, contactez-nous à :</p>
+    <p><strong>E-mail:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+</div>
+
+`
+  },
+  "pt": {
+    label: "Português",
+    dir: "ltr",
+    title: "Política de Privacidade",
+    updated: "Última atualização: 15 de novembro de 2025",
+    tech: {
+      vpn: `<p>O {{APP}} processa regras de DNS e de rede localmente no seu dispositivo por meio do <strong>VpnService</strong> do Android. Não redirecionamos o tráfego para servidores externos — o {{APP}} é um túnel local no estilo DNS.</p>`,
+      dns: `<p>O {{APP}} aplica os servidores DNS escolhidos localmente no seu dispositivo por meio do framework <strong>Network Extension</strong> da Apple. Não redirecionamos o tráfego para servidores externos — apenas o resolvedor DNS consultado pelo seu dispositivo muda.</p>`,
+    },
+    body: `
+
+<p>Bem-vindo ao {{APP}}! Esta Política de Privacidade explica como o {{APP}} ("nós") coleta, usa e protege suas informações quando você utiliza nosso aplicativo (o "App"). O {{APP}} foi criado com foco em privacidade e segue uma política rigorosa de não registro de logs.</p>
+
+<h2>1. Informações que não coletamos</h2>
+<p>O {{APP}} é um serviço focado em privacidade. <strong>Não</strong> coletamos nem armazenamos nada do seguinte:</p>
+<ul>
+    <li><strong>Sem histórico de navegação</strong></li>
+    <li><strong>Sem consultas DNS</strong></li>
+    <li><strong>Sem registros de conexão</strong> (sem horários, duração de sessão ou IP atribuído)</li>
+    <li><strong>Sem atividades on-line</strong></li>
+    <li><strong>Sem endereços IP</strong> (nem o seu IP original nem qualquer IP atribuído)</li>
+    <li><strong>Sem identificadores pessoais</strong> como nome, e-mail ou telefone</li>
+</ul>
+
+<h2>2. Informações coletadas automaticamente</h2>
+<p>Para o App funcionar corretamente, podemos coletar o mínimo de informações técnicas anônimas:</p>
+<ul>
+    <li><strong>Informações do dispositivo:</strong> modelo anônimo e versão do sistema.</li>
+    <li><strong>Dados de falhas:</strong> via Firebase Crashlytics para detectar e corrigir problemas. Os relatórios não contêm dados pessoais.</li>
+    <li><strong>Eventos de uso:</strong> dados anônimos básicos para melhorar o desempenho.</li>
+</ul>
+
+<h3>Nenhum dado sai do seu dispositivo</h3>
+{{TECH}}
+
+<h2>3. Como usamos as informações</h2>
+<p>As informações anônimas e limitadas que coletamos são usadas apenas para:</p>
+<ul>
+    <li>Garantir o funcionamento correto do App</li>
+    <li>Diagnosticar erros e falhas</li>
+    <li>Melhorar o desempenho e a estabilidade</li>
+</ul>
+
+<h2>4. Serviços de terceiros</h2>
+<p>Utilizamos os seguintes SDKs de terceiros:</p>
+<ul>
+    <li><strong>Google AdMob:</strong> para exibir anúncios. O AdMob pode coletar dados anônimos de desempenho de anúncios.</li>
+    <li><strong>Firebase Crashlytics:</strong> para diagnosticar problemas técnicos.</li>
+</ul>
+<p>Esses serviços podem coletar identificadores anônimos conforme suas próprias políticas de privacidade. O {{APP}} não compartilha dados além do que os SDKs coletam automaticamente.</p>
+
+<h2>5. Segurança dos dados</h2>
+<p>Adotamos medidas padrão do setor para proteger seus dados. Como o {{APP}} não armazena logs nem dados pessoais, o risco de exposição é mínimo.</p>
+
+<h2>6. Privacidade das crianças</h2>
+<p>O {{APP}} não se destina a menores de 13 anos. Não coletamos intencionalmente informações pessoais de crianças.</p>
+
+<h2>7. Alterações nesta Política</h2>
+<p>Podemos atualizar esta Política ocasionalmente. Quando houver alterações, atualizaremos a data de "Última atualização" no topo.</p>
+
+<div class="contact-info">
+    <h2>8. Fale conosco</h2>
+    <p>Se tiver dúvidas sobre esta Política de Privacidade, entre em contato:</p>
+    <p><strong>E-mail:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+</div>
+
+`
+  },
+  "tr": {
+    label: "Türkçe",
+    dir: "ltr",
+    title: "Gizlilik Politikası",
+    updated: "Son Güncelleme: 15 Kasım 2025",
+    body: `
+<h2>1. Toplamadığımız Bilgiler</h2>
+    <p>{{APP}} aşağıdaki bilgileri asla toplamaz veya saklamaz:</p>
+    <ul>
+        <li>Tarayıcı geçmişiniz</li>
+        <li>DNS sorgularınız</li>
+        <li>Bağlantı kayıtları (başlangıç, bitiş, süre)</li>
+        <li>Gerçek IP adresiniz veya atanmış IP adresi</li>
+        <li>Online aktiviteleriniz</li>
+        <li>İsim, e-posta, telefon gibi kimlik bilgileri</li>
+    </ul>
+
+    <p>Tüm DNS işlemleri tamamen cihazınızın içinde gerçekleşir ve hiçbir veri sunucularımıza gönderilmez.</p>
+
+    <h2>2. Otomatik Toplanabilecek Bilgiler</h2>
+    <ul>
+        <li>Cihaz bilgileri (model, işletim sistemi)</li>
+        <li>Uygulama çökmelerine dair anonim veriler (Firebase Crashlytics)</li>
+        <li>Basit uygulama olayları (VPN başlatıldı/durduruldu)</li>
+    </ul>
+
+    <h2>3. Bilgilerin Kullanımı</h2>
+    <p>Topladığımız sınırlı anonim bilgiler yalnızca:</p>
+    <ul>
+        <li>Uygulama performansını geliştirmek</li>
+        <li>Hataları tespit edip düzeltmek</li>
+        <li>Stabiliteyi artırmak</li>
+    </ul>
+
+    <h2>4. Üçüncü Taraf Hizmetleri</h2>
+    <p>Uygulama şu üçüncü taraf hizmetlerini kullanır:</p>
+    <ul>
+        <li>Google AdMob – Reklamlar için</li>
+        <li>Firebase Crashlytics – Çökme raporları için</li>
+    </ul>
+
+    <h2>5. Veri Güvenliği</h2>
+    <p>Hiçbir hassas veri tutulmadığından, veri ihlali riski son derece düşüktür.</p>
+
+    <h2>6. Çocukların Gizliliği</h2>
+    <p>Uygulama 13 yaş altındaki çocuklar için tasarlanmamıştır.</p>
+
+    <h2>7. Değişiklikler</h2>
+    <p>Bu politika zaman zaman güncellenebilir. Değişiklikler bu sayfada yayınlanır.</p>
+
+    <div class="contact-info">
+        <h2>8. İletişim</h2>
+        <p>Herhangi bir sorunuz varsa bizimle iletişime geçebilirsiniz:</p>
+        <p><strong>E-posta:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+`
+  },
+  "ru": {
+    label: "Русский",
+    dir: "ltr",
+    title: "Политика конфиденциальности",
+    updated: "Последнее обновление: 15 ноября 2025 г.",
+    tech: {
+      vpn: `<p>{{APP}} обрабатывает DNS и сетевые правила локально на вашем устройстве через <strong>VpnService</strong> в Android. Мы не перенаправляем трафик на внешние серверы — {{APP}} это локальный туннель DNS-типа.</p>`,
+      dns: `<p>{{APP}} применяет выбранные вами DNS-серверы локально на устройстве через фреймворк <strong>Network Extension</strong> от Apple. Мы не перенаправляем трафик на внешние серверы — меняется только DNS-резолвер, который запрашивает ваше устройство.</p>`,
+    },
+    body: `
+
+<p>Добро пожаловать в {{APP}}! Настоящая Политика конфиденциальности объясняет, как {{APP}} («мы») собирает, использует и защищает вашу информацию при использовании нашего мобильного приложения («Приложение»). {{APP}} разработан с учётом конфиденциальности и придерживается строгой политики отсутствия журналов.</p>
+
+<h2>1. Информация, которую мы не собираем</h2>
+<p>{{APP}} — сервис, ориентированный на конфиденциальность. Мы <strong>не</strong> собираем и не храним:</p>
+<ul>
+    <li><strong>Историю просмотров</strong></li>
+    <li><strong>DNS-запросы</strong></li>
+    <li><strong>Журналы подключений</strong> (ни отметок времени, ни длительности сессии, ни назначенного IP)</li>
+    <li><strong>Сведения о действиях в сети</strong></li>
+    <li><strong>IP-адреса</strong> (ни ваш исходный, ни любой назначенный)</li>
+    <li><strong>Личные идентификаторы</strong>, такие как имя, e-mail, номер телефона</li>
+</ul>
+
+<h2>2. Информация, собираемая автоматически</h2>
+<p>Для корректной работы Приложения мы можем собирать минимум анонимных технических данных:</p>
+<ul>
+    <li><strong>Сведения об устройстве:</strong> анонимная модель устройства, версия ОС.</li>
+    <li><strong>Данные о сбоях:</strong> через Firebase Crashlytics для обнаружения и устранения проблем. Отчёты о сбоях не содержат персональных данных.</li>
+    <li><strong>События использования:</strong> базовые анонимные данные для улучшения работы сервиса.</li>
+</ul>
+
+<h3>Данные не покидают ваше устройство</h3>
+{{TECH}}
+
+<h2>3. Как мы используем информацию</h2>
+<p>Ограниченные анонимные данные используются исключительно для:</p>
+<ul>
+    <li>обеспечения корректной работы Приложения</li>
+    <li>диагностики ошибок и сбоев</li>
+    <li>повышения производительности и стабильности</li>
+</ul>
+
+<h2>4. Сторонние сервисы</h2>
+<p>Мы используем следующие сторонние SDK:</p>
+<ul>
+    <li><strong>Google AdMob:</strong> для показа рекламы. AdMob может собирать анонимные данные об эффективности рекламы.</li>
+    <li><strong>Firebase Crashlytics:</strong> для диагностики технических проблем.</li>
+</ul>
+<p>Эти сервисы могут собирать анонимные идентификаторы согласно собственным политикам конфиденциальности. {{APP}} не передаёт им данные пользователей сверх того, что их SDK собирают автоматически.</p>
+
+<h2>5. Безопасность данных</h2>
+<p>Мы применяем отраслевые меры защиты. Поскольку {{APP}} не хранит журналы и персональные данные, риск их раскрытия минимален.</p>
+
+<h2>6. Конфиденциальность детей</h2>
+<p>{{APP}} не предназначен для детей младше 13 лет. Мы сознательно не собираем персональные данные детей.</p>
+
+<h2>7. Изменения в Политике</h2>
+<p>Мы можем время от времени обновлять настоящую Политику. При внесении изменений мы обновим дату «Последнее обновление» вверху страницы.</p>
+
+<div class="contact-info">
+    <h2>8. Свяжитесь с нами</h2>
+    <p>Если у вас есть вопросы по настоящей Политике конфиденциальности, напишите нам:</p>
+    <p><strong>Эл. почта:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+</div>
+
+`
+  },
+  "ur": {
+    label: "اردو",
+    dir: "rtl",
+    title: "رازداری کی پالیسی",
+    updated: "آخری تازہ کاری: ۱۵ نومبر ۲۰۲۵",
+    tech: {
+      vpn: `<p>{{APP}} آپ کے آلے پر Android کے <strong>VpnService</strong> کے ذریعے DNS اور نیٹ ورک قواعد مقامی طور پر پروسیس کرتا ہے۔ ہم ٹریفک کو بیرونی سرورز کی طرف نہیں بھیجتے — {{APP}} ایک مقامی DNS طرز کی ٹنل ہے۔</p>`,
+      dns: `<p>{{APP}} آپ کے منتخب کردہ DNS سرورز کو Apple کے <strong>Network Extension</strong> فریم ورک کے ذریعے آپ کے آلے پر مقامی طور پر لاگو کرتا ہے۔ ہم ٹریفک بیرونی سرورز کو نہیں بھیجتے — صرف آپ کے آلے کا DNS ریزولور تبدیل ہوتا ہے۔</p>`,
+    },
+    body: `
+
+<p>{{APP}} میں خوش آمدید! یہ رازداری کی پالیسی بتاتی ہے کہ ہماری موبائل ایپلیکیشن ("ایپ") استعمال کرتے وقت {{APP}} ("ہم") آپ کی معلومات کیسے جمع، استعمال اور محفوظ کرتا ہے۔ {{APP}} کو رازداری کو مدِنظر رکھ کر بنایا گیا ہے اور یہ سخت نو-لاگز پالیسی پر عمل کرتا ہے۔</p>
+
+<h2>۱. جو معلومات ہم جمع نہیں کرتے</h2>
+<p>{{APP}} ایک رازداری پر مرکوز سروس ہے۔ ہم درج ذیل میں سے کچھ بھی جمع یا محفوظ <strong>نہیں</strong> کرتے:</p>
+<ul>
+    <li><strong>براؤزنگ ہسٹری نہیں</strong></li>
+    <li><strong>DNS درخواستیں نہیں</strong></li>
+    <li><strong>کنکشن لاگز نہیں</strong> (نہ وقت، نہ دورانیہ، نہ تفویض کردہ IP)</li>
+    <li><strong>آن لائن سرگرمیاں نہیں</strong></li>
+    <li><strong>IP پتے نہیں</strong> (نہ آپ کا اصل IP، نہ کوئی تفویض کردہ IP)</li>
+    <li><strong>ذاتی شناخت نہیں</strong> جیسے نام، ای میل، فون نمبر</li>
+</ul>
+
+<h2>۲. جو معلومات خودکار طور پر جمع ہوتی ہیں</h2>
+<p>ایپ کو بہتر چلانے کے لیے ہم کم سے کم گمنام تکنیکی معلومات جمع کر سکتے ہیں:</p>
+<ul>
+    <li><strong>ڈیوائس کی معلومات:</strong> گمنام ڈیوائس ماڈل، OS ورژن۔</li>
+    <li><strong>کریش ڈیٹا:</strong> ایپ کے مسائل کی نشاندہی اور اصلاح کے لیے Firebase Crashlytics کے ذریعے۔ کریش رپورٹس میں ذاتی ڈیٹا نہیں ہوتا۔</li>
+    <li><strong>استعمال کے واقعات:</strong> کارکردگی بہتر بنانے کے لیے بنیادی گمنام ڈیٹا۔</li>
+</ul>
+
+<h3>ڈیٹا آپ کے آلے سے باہر نہیں جاتا</h3>
+{{TECH}}
+
+<h2>۳. ہم معلومات کیسے استعمال کرتے ہیں</h2>
+<p>ہم جو محدود گمنام معلومات جمع کرتے ہیں وہ صرف ان کے لیے ہیں:</p>
+<ul>
+    <li>ایپ کے درست کام کو یقینی بنانا</li>
+    <li>خرابیوں اور کریش کی تشخیص</li>
+    <li>کارکردگی اور استحکام میں بہتری</li>
+</ul>
+
+<h2>۴. فریقِ ثالث خدمات</h2>
+<p>ہم درج ذیل فریقِ ثالث SDK استعمال کرتے ہیں:</p>
+<ul>
+    <li><strong>Google AdMob:</strong> اشتہارات دکھانے کے لیے۔ AdMob گمنام اشتہاری کارکردگی کا ڈیٹا جمع کر سکتا ہے۔</li>
+    <li><strong>Firebase Crashlytics:</strong> تکنیکی مسائل کی تشخیص کے لیے۔</li>
+</ul>
+<p>یہ خدمات اپنی رازداری پالیسیوں کے مطابق گمنام شناخت کنندہ جمع کر سکتی ہیں۔ {{APP}} ان کے SDK کے خودکار طور پر جمع کردہ ڈیٹا سے زیادہ کچھ شیئر نہیں کرتا۔</p>
+
+<h2>۵. ڈیٹا کی حفاظت</h2>
+<p>ہم آپ کے ڈیٹا کے تحفظ کے لیے صنعتی معیار کے اقدامات کرتے ہیں۔ چونکہ {{APP}} لاگز یا ذاتی ڈیٹا محفوظ نہیں کرتا، خطرہ کم سے کم ہے۔</p>
+
+<h2>۶. بچوں کی رازداری</h2>
+<p>{{APP}} ۱۳ سال سے کم عمر بچوں کے لیے نہیں ہے۔ ہم دانستہ طور پر بچوں سے ذاتی معلومات جمع نہیں کرتے۔</p>
+
+<h2>۷. اس پالیسی میں تبدیلیاں</h2>
+<p>ہم اس پالیسی کو وقتاً فوقتاً اپ ڈیٹ کر سکتے ہیں۔ تبدیلی کی صورت میں ہم اوپر دی گئی "آخری تازہ کاری" کی تاریخ بدل دیں گے۔</p>
+
+<div class="contact-info">
+    <h2>۸. ہم سے رابطہ کریں</h2>
+    <p>اگر اس پالیسی کے بارے میں کوئی سوال ہو تو ہم سے رابطہ کریں:</p>
+    <p><strong>ای میل:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+</div>
+
+`
+  },
+  "ar": {
+    label: "العربية",
+    dir: "rtl",
+    title: "سياسة الخصوصية",
+    updated: "آخر تحديث: ١٥ نوفمبر ٢٠٢٥",
+    tech: {
+      vpn: `<p>{{APP}} يعالج قواعد DNS والشبكة محليًا على جهازك عبر <strong>VpnService</strong> في أندرويد. نحن لا نعيد توجيه بياناتك إلى خوادم خارجية — {{APP}} نفق محلي بنمط DNS.</p>`,
+      dns: `<p>{{APP}} يطبّق خوادم DNS التي اخترتها محليًا على جهازك عبر إطار <strong>Network Extension</strong> من Apple. نحن لا نعيد توجيه بياناتك إلى خوادم خارجية — يتغيّر فقط مُحلِّل DNS الذي يستخدمه جهازك.</p>`,
+    },
+    body: `
+
+<p>مرحبًا بك في {{APP}}! توضّح سياسة الخصوصية هذه كيف يقوم {{APP}} ("نحن") بجمع معلوماتك واستخدامها وحمايتها عند استخدام تطبيقنا ("التطبيق"). صُمّم {{APP}} مع مراعاة الخصوصية ويلتزم بسياسة صارمة بعدم الاحتفاظ بالسجلات.</p>
+
+<h2>١. معلومات لا نجمعها</h2>
+<p>{{APP}} خدمة تركّز على الخصوصية. نحن <strong>لا</strong> نجمع أو نخزّن أيًّا ممّا يلي:</p>
+<ul>
+    <li><strong>لا سجل تصفّح</strong></li>
+    <li><strong>لا استعلامات DNS</strong></li>
+    <li><strong>لا سجلات اتصال</strong> (لا أوقات ولا مدة جلسة ولا عنوان IP مُخصّص)</li>
+    <li><strong>لا أنشطة على الإنترنت</strong></li>
+    <li><strong>لا عناوين IP</strong> (لا عنوانك الأصلي ولا أي عنوان مُخصّص)</li>
+    <li><strong>لا معرّفات شخصية</strong> مثل الاسم أو البريد الإلكتروني أو رقم الهاتف</li>
+</ul>
+
+<h2>٢. معلومات نجمعها تلقائيًا</h2>
+<p>لتشغيل التطبيق بسلاسة، قد نجمع الحد الأدنى من المعلومات التقنية المجهولة:</p>
+<ul>
+    <li><strong>معلومات الجهاز:</strong> طراز الجهاز ونسخة نظام التشغيل بشكل مجهول.</li>
+    <li><strong>بيانات الأعطال:</strong> عبر Firebase Crashlytics لاكتشاف مشاكل التطبيق وإصلاحها. لا تحتوي تقارير الأعطال على بيانات شخصية.</li>
+    <li><strong>أحداث الاستخدام:</strong> بيانات مجهولة أساسية لتحسين أداء الخدمة.</li>
+</ul>
+
+<h3>لا تغادر البيانات جهازك</h3>
+{{TECH}}
+
+<h2>٣. كيف نستخدم المعلومات</h2>
+<p>تُستخدم المعلومات المجهولة المحدودة التي نجمعها فقط من أجل:</p>
+<ul>
+    <li>ضمان عمل التطبيق بشكل صحيح</li>
+    <li>تشخيص الأخطاء والأعطال</li>
+    <li>تحسين الأداء والاستقرار</li>
+</ul>
+
+<h2>٤. خدمات الطرف الثالث</h2>
+<p>نستخدم حزم التطوير التالية:</p>
+<ul>
+    <li><strong>Google AdMob:</strong> لعرض الإعلانات. قد يجمع AdMob بيانات مجهولة عن أداء الإعلانات.</li>
+    <li><strong>Firebase Crashlytics:</strong> لتشخيص المشاكل التقنية.</li>
+</ul>
+<p>قد تجمع هذه الخدمات معرّفات مجهولة وفقًا لسياسات الخصوصية الخاصة بها. لا يشارك {{APP}} بيانات المستخدمين معها بما يتجاوز ما تجمعه حزمها تلقائيًا.</p>
+
+<h2>٥. أمان البيانات</h2>
+<p>نطبّق إجراءات وفق معايير الصناعة لحماية بياناتك. وبما أنّ {{APP}} لا يخزّن سجلات أو بيانات شخصية، فإنّ خطر التعرّض ضئيل جدًا.</p>
+
+<h2>٦. خصوصية الأطفال</h2>
+<p>{{APP}} غير مخصّص للأطفال دون سن ١٣ عامًا. ولا نجمع عن قصد أي معلومات شخصية من الأطفال.</p>
+
+<h2>٧. تغييرات على هذه السياسة</h2>
+<p>قد نحدّث سياسة الخصوصية هذه من حين لآخر. وعند إجراء تغييرات، سنحدّث تاريخ "آخر تحديث" في أعلى الصفحة.</p>
+
+<div class="contact-info">
+    <h2>٨. تواصل معنا</h2>
+    <p>إذا كانت لديك أي أسئلة حول سياسة الخصوصية هذه، يُرجى التواصل معنا على:</p>
+    <p><strong>البريد الإلكتروني:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+</div>
+
 `
   },
   "fa": {
@@ -239,60 +839,72 @@ var DOCS = {
             </div>
 `
   },
-  "tr": {
-    label: "Türkçe",
+  "hi": {
+    label: "हिन्दी",
     dir: "ltr",
-    title: "Gizlilik Politikası",
-    updated: "Son Güncelleme: 15 Kasım 2025",
+    title: "गोपनीयता नीति",
+    updated: "अंतिम अद्यतन: 15 नवंबर 2025",
+    tech: {
+      vpn: `<p>{{APP}} आपके डिवाइस पर Android के <strong>VpnService</strong> के माध्यम से DNS और नेटवर्क नियमों को स्थानीय रूप से संसाधित करता है। हम ट्रैफ़िक को बाहरी सर्वर पर पुनर्निर्देशित नहीं करते — {{APP}} एक स्थानीय DNS-शैली टनल है।</p>`,
+      dns: `<p>{{APP}} आपके चुने हुए DNS सर्वर को Apple के <strong>Network Extension</strong> फ़्रेमवर्क के माध्यम से आपके डिवाइस पर स्थानीय रूप से लागू करता है। हम ट्रैफ़िक को बाहरी सर्वर पर पुनर्निर्देशित नहीं करते — केवल आपके डिवाइस का DNS रिज़ॉल्वर बदलता है।</p>`,
+    },
     body: `
-<h2>1. Toplamadığımız Bilgiler</h2>
-    <p>{{APP}} aşağıdaki bilgileri asla toplamaz veya saklamaz:</p>
-    <ul>
-        <li>Tarayıcı geçmişiniz</li>
-        <li>DNS sorgularınız</li>
-        <li>Bağlantı kayıtları (başlangıç, bitiş, süre)</li>
-        <li>Gerçek IP adresiniz veya atanmış IP adresi</li>
-        <li>Online aktiviteleriniz</li>
-        <li>İsim, e-posta, telefon gibi kimlik bilgileri</li>
-    </ul>
 
-    <p>Tüm DNS işlemleri tamamen cihazınızın içinde gerçekleşir ve hiçbir veri sunucularımıza gönderilmez.</p>
+<p>{{APP}} में आपका स्वागत है! यह गोपनीयता नीति बताती है कि हमारे मोबाइल ऐप्लिकेशन ("ऐप") का उपयोग करते समय {{APP}} ("हम") आपकी जानकारी कैसे एकत्र, उपयोग और सुरक्षित करता है। {{APP}} को गोपनीयता को ध्यान में रखकर बनाया गया है और यह सख़्त नो-लॉग्स नीति का पालन करता है।</p>
 
-    <h2>2. Otomatik Toplanabilecek Bilgiler</h2>
-    <ul>
-        <li>Cihaz bilgileri (model, işletim sistemi)</li>
-        <li>Uygulama çökmelerine dair anonim veriler (Firebase Crashlytics)</li>
-        <li>Basit uygulama olayları (VPN başlatıldı/durduruldu)</li>
-    </ul>
+<h2>1. जो जानकारी हम एकत्र नहीं करते</h2>
+<p>{{APP}} एक गोपनीयता-केंद्रित सेवा है। हम निम्नलिखित में से कुछ भी एकत्र या संग्रहीत <strong>नहीं</strong> करते:</p>
+<ul>
+    <li><strong>ब्राउज़िंग इतिहास नहीं</strong></li>
+    <li><strong>DNS क्वेरी नहीं</strong></li>
+    <li><strong>कनेक्शन लॉग नहीं</strong> (न समय, न सत्र अवधि, न असाइन किया गया IP)</li>
+    <li><strong>ऑनलाइन गतिविधियाँ नहीं</strong></li>
+    <li><strong>IP पते नहीं</strong> (न आपका मूल IP, न कोई असाइन किया गया IP)</li>
+    <li><strong>व्यक्तिगत पहचानकर्ता नहीं</strong> जैसे नाम, ईमेल, फ़ोन नंबर</li>
+</ul>
 
-    <h2>3. Bilgilerin Kullanımı</h2>
-    <p>Topladığımız sınırlı anonim bilgiler yalnızca:</p>
-    <ul>
-        <li>Uygulama performansını geliştirmek</li>
-        <li>Hataları tespit edip düzeltmek</li>
-        <li>Stabiliteyi artırmak</li>
-    </ul>
+<h2>2. जो जानकारी स्वतः एकत्र होती है</h2>
+<p>ऐप को सुचारू रूप से चलाने के लिए हम न्यूनतम अनाम तकनीकी जानकारी एकत्र कर सकते हैं:</p>
+<ul>
+    <li><strong>डिवाइस जानकारी:</strong> अनाम डिवाइस मॉडल, OS संस्करण।</li>
+    <li><strong>क्रैश डेटा:</strong> ऐप की समस्याओं का पता लगाने और सुधारने के लिए Firebase Crashlytics के माध्यम से। क्रैश रिपोर्ट में व्यक्तिगत डेटा नहीं होता।</li>
+    <li><strong>उपयोग इवेंट:</strong> सेवा का प्रदर्शन बेहतर करने के लिए बुनियादी अनाम डेटा।</li>
+</ul>
 
-    <h2>4. Üçüncü Taraf Hizmetleri</h2>
-    <p>Uygulama şu üçüncü taraf hizmetlerini kullanır:</p>
-    <ul>
-        <li>Google AdMob – Reklamlar için</li>
-        <li>Firebase Crashlytics – Çökme raporları için</li>
-    </ul>
+<h3>डेटा आपके डिवाइस से बाहर नहीं जाता</h3>
+{{TECH}}
 
-    <h2>5. Veri Güvenliği</h2>
-    <p>Hiçbir hassas veri tutulmadığından, veri ihlali riski son derece düşüktür.</p>
+<h2>3. हम जानकारी का उपयोग कैसे करते हैं</h2>
+<p>हम जो सीमित अनाम जानकारी एकत्र करते हैं, उसका उपयोग केवल इनके लिए होता है:</p>
+<ul>
+    <li>ऐप के सही ढंग से काम करने को सुनिश्चित करना</li>
+    <li>बग और क्रैश की पहचान करना</li>
+    <li>प्रदर्शन और स्थिरता में सुधार</li>
+</ul>
 
-    <h2>6. Çocukların Gizliliği</h2>
-    <p>Uygulama 13 yaş altındaki çocuklar için tasarlanmamıştır.</p>
+<h2>4. तृतीय-पक्ष सेवाएँ</h2>
+<p>हम निम्नलिखित तृतीय-पक्ष SDK का उपयोग करते हैं:</p>
+<ul>
+    <li><strong>Google AdMob:</strong> विज्ञापन दिखाने के लिए। AdMob अनाम विज्ञापन-प्रदर्शन डेटा एकत्र कर सकता है।</li>
+    <li><strong>Firebase Crashlytics:</strong> तकनीकी समस्याओं की पहचान के लिए।</li>
+</ul>
+<p>ये सेवाएँ अपनी गोपनीयता नीतियों के अनुसार अनाम पहचानकर्ता एकत्र कर सकती हैं। {{APP}} इनके SDK द्वारा स्वतः एकत्र किए जाने वाले डेटा से अधिक कुछ साझा नहीं करता।</p>
 
-    <h2>7. Değişiklikler</h2>
-    <p>Bu politika zaman zaman güncellenebilir. Değişiklikler bu sayfada yayınlanır.</p>
+<h2>5. डेटा सुरक्षा</h2>
+<p>हम आपके डेटा की सुरक्षा के लिए उद्योग-मानक उपाय लागू करते हैं। चूँकि {{APP}} लॉग या व्यक्तिगत डेटा संग्रहीत नहीं करता, जोखिम न्यूनतम है।</p>
 
-    <div class="contact-info">
-        <h2>8. İletişim</h2>
-        <p>Herhangi bir sorunuz varsa bizimle iletişime geçebilirsiniz:</p>
-        <p><strong>E-posta:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+<h2>6. बच्चों की गोपनीयता</h2>
+<p>{{APP}} 13 वर्ष से कम आयु के बच्चों के लिए नहीं है। हम जानबूझकर बच्चों से व्यक्तिगत जानकारी एकत्र नहीं करते।</p>
+
+<h2>7. इस नीति में बदलाव</h2>
+<p>हम इस गोपनीयता नीति को समय-समय पर अपडेट कर सकते हैं। बदलाव होने पर हम ऊपर दी गई "अंतिम अद्यतन" तिथि बदल देंगे।</p>
+
+<div class="contact-info">
+    <h2>8. संपर्क करें</h2>
+    <p>इस गोपनीयता नीति के बारे में कोई प्रश्न हो तो हमसे संपर्क करें:</p>
+    <p><strong>ईमेल:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+</div>
+
 `
   },
 };
