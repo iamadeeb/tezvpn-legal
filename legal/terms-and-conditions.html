@@ -56,6 +56,162 @@ var APPS = {
   dns: { name: "Tez DNS", logo: "../appicon.png" }
 };
 var DOCS = {
+  "id": {
+    label: "Bahasa Indonesia",
+    dir: "ltr",
+    title: "Syarat dan Ketentuan",
+    updated: "Terakhir Diperbarui: 15 November 2025",
+    tech: {
+      vpn: `<p>{{APP}} menyediakan koneksi lokal bergaya DNS menggunakan API VpnService Android. Aplikasi ini tidak menyediakan server VPN eksternal atau layanan penggantian IP. Semua pemrosesan DNS terjadi di perangkat Anda.</p>`,
+      dns: `<p>{{APP}} menerapkan konfigurasi DNS lokal menggunakan kerangka kerja Network Extension milik Apple. Aplikasi ini tidak menyediakan server VPN eksternal atau layanan penggantian IP. Lalu lintas Anda tidak melewati server kami — hanya resolver DNS perangkat Anda yang berubah.</p>`,
+    },
+    body: `
+
+<p>Dengan memasang atau menggunakan {{APP}} ("Aplikasi"), Anda menyetujui Syarat dan Ketentuan ini. Jika tidak setuju, silakan segera hapus Aplikasi.</p>
+
+<h2>1. Deskripsi Layanan</h2>
+{{TECH}}
+
+<h2>2. Penggunaan yang Dapat Diterima</h2>
+<p>Anda setuju untuk tidak:</p>
+<ul>
+    <li>Menggunakan Aplikasi untuk kegiatan ilegal</li>
+    <li>Mengganggu, mengubah, atau merekayasa balik Aplikasi</li>
+    <li>Mengganggu keamanan jaringan atau performa aplikasi</li>
+</ul>
+
+<h2>3. Kebijakan Tanpa Log</h2>
+<p>{{APP}} tidak mengumpulkan atau menyimpan:</p>
+<ul>
+    <li>Riwayat penjelajahan</li>
+    <li>Kueri DNS</li>
+    <li>Alamat IP (asli maupun yang diberikan)</li>
+    <li>Waktu koneksi atau durasi sesi</li>
+    <li>Data identitas pribadi</li>
+</ul>
+
+<h2>4. Layanan Pihak Ketiga</h2>
+<p>Kami menggunakan:</p>
+<ul>
+    <li>Google AdMob (iklan)</li>
+    <li>Firebase Crashlytics (laporan kerusakan)</li>
+</ul>
+
+<h2>5. Iklan</h2>
+<p>Dengan menggunakan Aplikasi, Anda setuju bahwa iklan pihak ketiga dapat ditampilkan. Penyedia iklan dapat mengumpulkan data anonim yang diperlukan untuk penayangan iklan.</p>
+
+<h2>6. Penafian Jaminan</h2>
+<p>Aplikasi disediakan "sebagaimana adanya" tanpa jaminan apa pun, termasuk:</p>
+<ul>
+    <li>Ketersediaan</li>
+    <li>Kinerja bebas kesalahan</li>
+    <li>Keamanan menyeluruh</li>
+    <li>Kompatibilitas perangkat</li>
+</ul>
+
+<h2>7. Batasan Tanggung Jawab</h2>
+<p>{{APP}} tidak bertanggung jawab atas:</p>
+<ul>
+    <li>Kehilangan data</li>
+    <li>Gangguan layanan</li>
+    <li>Pelanggaran keamanan akibat ancaman eksternal</li>
+    <li>Kerugian tidak langsung atau insidental</li>
+</ul>
+
+<h2>8. Penghentian</h2>
+<p>Kami dapat menghentikan akses Anda ke Aplikasi kapan saja dalam hal penyalahgunaan atau pelanggaran Syarat ini.</p>
+
+<h2>9. Perubahan</h2>
+<p>Kami dapat merevisi Syarat ini kapan saja. Penggunaan Aplikasi secara berkelanjutan berarti Anda menerima Syarat yang diperbarui.</p>
+
+<h2>10. Hukum yang Berlaku</h2>
+<p>Syarat ini diatur oleh hukum wilayah atau negara tempat tinggal Anda.</p>
+
+<div class="contact-info">
+    <h2>11. Hubungi Kami</h2>
+    <p><strong>Email:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+</div>
+
+`
+  },
+  "de": {
+    label: "Deutsch",
+    dir: "ltr",
+    title: "Geschäftsbedingungen",
+    updated: "Zuletzt aktualisiert: 15. November 2025",
+    tech: {
+      vpn: `<p>{{APP}} stellt über die VpnService-API von Android eine lokale Verbindung im DNS-Stil bereit. Es werden keine externen VPN-Server und keine IP-Wechseldienste angeboten. Die gesamte DNS-Verarbeitung erfolgt lokal auf deinem Gerät.</p>`,
+      dns: `<p>{{APP}} wendet über Apples Network-Extension-Framework eine lokale DNS-Konfiguration an. Es werden keine externen VPN-Server und keine IP-Wechseldienste angeboten. Dein Datenverkehr läuft nicht über unsere Server — es ändert sich nur der DNS-Resolver, den dein Gerät abfragt.</p>`,
+    },
+    body: `
+
+<p>Mit der Installation oder Nutzung von {{APP}} (der „App“) stimmst du diesen Geschäftsbedingungen zu. Wenn du nicht einverstanden bist, deinstalliere die App bitte umgehend.</p>
+
+<h2>1. Beschreibung des Dienstes</h2>
+{{TECH}}
+
+<h2>2. Zulässige Nutzung</h2>
+<p>Du verpflichtest dich, Folgendes zu unterlassen:</p>
+<ul>
+    <li>die App für illegale Aktivitäten zu nutzen</li>
+    <li>die App zu stören, zu verändern oder zurückzuentwickeln</li>
+    <li>die Netzwerksicherheit oder die Leistung der App zu beeinträchtigen</li>
+</ul>
+
+<h2>3. No-Logs-Richtlinie</h2>
+<p>{{APP}} erhebt und speichert nicht:</p>
+<ul>
+    <li>Browserverlauf</li>
+    <li>DNS-Anfragen</li>
+    <li>IP-Adressen (ursprüngliche oder zugewiesene)</li>
+    <li>Verbindungszeiten oder Sitzungsdauer</li>
+    <li>personenbezogene Identifikationsdaten</li>
+</ul>
+
+<h2>4. Dienste von Drittanbietern</h2>
+<p>Wir nutzen:</p>
+<ul>
+    <li>Google AdMob (Werbung)</li>
+    <li>Firebase Crashlytics (Absturzberichte)</li>
+</ul>
+
+<h2>5. Werbung</h2>
+<p>Mit der Nutzung der App stimmst du zu, dass Werbung von Drittanbietern angezeigt werden kann. Werbeanbieter können die dafür erforderlichen anonymen Daten erheben.</p>
+
+<h2>6. Gewährleistungsausschluss</h2>
+<p>Die App wird „wie besehen“ ohne jegliche Garantien bereitgestellt, einschließlich:</p>
+<ul>
+    <li>Verfügbarkeit</li>
+    <li>fehlerfreier Betrieb</li>
+    <li>vollständige Sicherheit</li>
+    <li>Gerätekompatibilität</li>
+</ul>
+
+<h2>7. Haftungsbeschränkung</h2>
+<p>{{APP}} haftet nicht für:</p>
+<ul>
+    <li>Datenverlust</li>
+    <li>Dienstunterbrechungen</li>
+    <li>Sicherheitsverletzungen durch externe Bedrohungen</li>
+    <li>mittelbare oder beiläufige Schäden</li>
+</ul>
+
+<h2>8. Kündigung</h2>
+<p>Wir können deinen Zugang zur App bei Missbrauch oder Verstoß gegen diese Bedingungen jederzeit beenden.</p>
+
+<h2>9. Änderungen</h2>
+<p>Wir können diese Bedingungen jederzeit überarbeiten. Die weitere Nutzung der App gilt als Annahme der aktualisierten Bedingungen.</p>
+
+<h2>10. Anwendbares Recht</h2>
+<p>Diese Bedingungen unterliegen den Gesetzen deiner Region oder deines Wohnsitzlandes.</p>
+
+<div class="contact-info">
+    <h2>11. Kontakt</h2>
+    <p><strong>E-Mail:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+</div>
+
+`
+  },
   "en": {
     label: "English",
     dir: "ltr",
@@ -66,6 +222,8 @@ var DOCS = {
       dns: `<p>{{APP}} applies a local DNS configuration using Apple’s Network Extension framework. It does not provide external VPN servers or IP-changing services. Your traffic is not routed through our servers — only the DNS resolver your device queries is changed.</p>`,
     },
     body: `
+<p>By installing or using {{APP}} (“App”), you agree to these Terms &amp; Conditions. If you do not agree, please uninstall the App immediately.</p>
+
 <h2>1. Description of the Service</h2>
         {{TECH}}
 
@@ -129,6 +287,545 @@ var DOCS = {
             <p>Email: <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
 `
   },
+  "es": {
+    label: "Español",
+    dir: "ltr",
+    title: "Términos y Condiciones",
+    updated: "Última actualización: 15 de noviembre de 2025",
+    tech: {
+      vpn: `<p>{{APP}} ofrece una conexión local de tipo DNS mediante la API VpnService de Android. No proporciona servidores VPN externos ni servicios de cambio de IP. Todo el procesamiento de DNS ocurre localmente en tu dispositivo.</p>`,
+      dns: `<p>{{APP}} aplica una configuración de DNS local mediante el framework Network Extension de Apple. No proporciona servidores VPN externos ni servicios de cambio de IP. Tu tráfico no pasa por nuestros servidores: solo cambia el resolutor DNS que consulta tu dispositivo.</p>`,
+    },
+    body: `
+
+<p>Al instalar o utilizar {{APP}} (la "App"), aceptas estos Términos y Condiciones. Si no estás de acuerdo, desinstala la App de inmediato.</p>
+
+<h2>1. Descripción del servicio</h2>
+{{TECH}}
+
+<h2>2. Uso aceptable</h2>
+<p>Aceptas no:</p>
+<ul>
+    <li>Usar la App para actividades ilegales</li>
+    <li>Alterar, modificar o aplicar ingeniería inversa a la App</li>
+    <li>Interferir con la seguridad de la red o el rendimiento de la App</li>
+</ul>
+
+<h2>3. Política de no registros</h2>
+<p>{{APP}} no recopila ni almacena:</p>
+<ul>
+    <li>Historial de navegación</li>
+    <li>Consultas DNS</li>
+    <li>Direcciones IP (originales o asignadas)</li>
+    <li>Marcas de tiempo de conexión o duración de sesión</li>
+    <li>Datos de identificación personal</li>
+</ul>
+
+<h2>4. Servicios de terceros</h2>
+<p>Utilizamos:</p>
+<ul>
+    <li>Google AdMob (anuncios)</li>
+    <li>Firebase Crashlytics (informes de fallos)</li>
+</ul>
+
+<h2>5. Publicidad</h2>
+<p>Al usar la App, aceptas que puedan mostrarse anuncios de terceros. Los proveedores de anuncios pueden recopilar datos anónimos necesarios para su entrega.</p>
+
+<h2>6. Exención de garantías</h2>
+<p>La App se ofrece "tal cual", sin garantía alguna, incluidas:</p>
+<ul>
+    <li>Disponibilidad</li>
+    <li>Funcionamiento sin errores</li>
+    <li>Seguridad total</li>
+    <li>Compatibilidad con todos los dispositivos</li>
+</ul>
+
+<h2>7. Limitación de responsabilidad</h2>
+<p>{{APP}} no se hace responsable de:</p>
+<ul>
+    <li>Pérdida de datos</li>
+    <li>Interrupciones del servicio</li>
+    <li>Brechas de seguridad causadas por amenazas externas</li>
+    <li>Daños indirectos o incidentales</li>
+</ul>
+
+<h2>8. Terminación</h2>
+<p>Podemos cancelar tu acceso a la App en cualquier momento en caso de uso indebido o incumplimiento de estos Términos.</p>
+
+<h2>9. Cambios</h2>
+<p>Podemos revisar estos Términos en cualquier momento. El uso continuado de la App implica que aceptas los Términos actualizados.</p>
+
+<h2>10. Legislación aplicable</h2>
+<p>Estos Términos se rigen por las leyes de tu región o país de residencia.</p>
+
+<div class="contact-info">
+    <h2>11. Contacto</h2>
+    <p><strong>Correo electrónico:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+</div>
+
+`
+  },
+  "fr": {
+    label: "Français",
+    dir: "ltr",
+    title: "Conditions générales",
+    updated: "Dernière mise à jour : 15 novembre 2025",
+    tech: {
+      vpn: `<p>{{APP}} fournit une connexion locale de type DNS via l’API VpnService d’Android. Elle ne fournit ni serveurs VPN externes ni service de changement d’IP. Tout le traitement DNS a lieu localement sur votre appareil.</p>`,
+      dns: `<p>{{APP}} applique une configuration DNS locale via le framework Network Extension d’Apple. Elle ne fournit ni serveurs VPN externes ni service de changement d’IP. Votre trafic ne transite pas par nos serveurs : seul le résolveur DNS interrogé par votre appareil change.</p>`,
+    },
+    body: `
+
+<p>En installant ou en utilisant {{APP}} (l’« Application »), vous acceptez les présentes Conditions générales. Si vous n’êtes pas d’accord, veuillez désinstaller l’Application immédiatement.</p>
+
+<h2>1. Description du service</h2>
+{{TECH}}
+
+<h2>2. Utilisation acceptable</h2>
+<p>Vous vous engagez à ne pas :</p>
+<ul>
+    <li>Utiliser l’Application à des fins illégales</li>
+    <li>Perturber, modifier ou décompiler l’Application</li>
+    <li>Nuire à la sécurité du réseau ou aux performances de l’Application</li>
+</ul>
+
+<h2>3. Politique d’absence de journaux</h2>
+<p>{{APP}} ne collecte ni ne conserve :</p>
+<ul>
+    <li>L’historique de navigation</li>
+    <li>Les requêtes DNS</li>
+    <li>Les adresses IP (d’origine ou attribuées)</li>
+    <li>Les horodatages de connexion ou la durée des sessions</li>
+    <li>Les données d’identification personnelle</li>
+</ul>
+
+<h2>4. Services tiers</h2>
+<p>Nous utilisons :</p>
+<ul>
+    <li>Google AdMob (publicités)</li>
+    <li>Firebase Crashlytics (rapports de plantage)</li>
+</ul>
+
+<h2>5. Publicités</h2>
+<p>En utilisant l’Application, vous acceptez que des publicités tierces puissent être affichées. Les régies peuvent collecter les données anonymes nécessaires à leur diffusion.</p>
+
+<h2>6. Exclusion de garanties</h2>
+<p>L’Application est fournie « en l’état », sans aucune garantie, notamment :</p>
+<ul>
+    <li>Disponibilité</li>
+    <li>Fonctionnement sans erreur</li>
+    <li>Sécurité totale</li>
+    <li>Compatibilité avec tous les appareils</li>
+</ul>
+
+<h2>7. Limitation de responsabilité</h2>
+<p>{{APP}} ne saurait être tenue responsable de :</p>
+<ul>
+    <li>La perte de données</li>
+    <li>Les interruptions de service</li>
+    <li>Les failles de sécurité dues à des menaces externes</li>
+    <li>Les dommages indirects ou accessoires</li>
+</ul>
+
+<h2>8. Résiliation</h2>
+<p>Nous pouvons mettre fin à votre accès à l’Application à tout moment en cas d’usage abusif ou de violation des présentes Conditions.</p>
+
+<h2>9. Modifications</h2>
+<p>Nous pouvons réviser ces Conditions à tout moment. La poursuite de l’utilisation de l’Application vaut acceptation des Conditions mises à jour.</p>
+
+<h2>10. Droit applicable</h2>
+<p>Les présentes Conditions sont régies par les lois de votre région ou pays de résidence.</p>
+
+<div class="contact-info">
+    <h2>11. Nous contacter</h2>
+    <p><strong>E-mail:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+</div>
+
+`
+  },
+  "pt": {
+    label: "Português",
+    dir: "ltr",
+    title: "Termos e Condições",
+    updated: "Última atualização: 15 de novembro de 2025",
+    tech: {
+      vpn: `<p>O {{APP}} oferece uma conexão local no estilo DNS usando a API VpnService do Android. Não fornece servidores VPN externos nem serviços de troca de IP. Todo o processamento de DNS ocorre localmente no seu dispositivo.</p>`,
+      dns: `<p>O {{APP}} aplica uma configuração de DNS local usando o framework Network Extension da Apple. Não fornece servidores VPN externos nem serviços de troca de IP. Seu tráfego não passa pelos nossos servidores — apenas o resolvedor DNS consultado pelo dispositivo muda.</p>`,
+    },
+    body: `
+
+<p>Ao instalar ou usar o {{APP}} (o "App"), você concorda com estes Termos e Condições. Se não concordar, desinstale o App imediatamente.</p>
+
+<h2>1. Descrição do serviço</h2>
+{{TECH}}
+
+<h2>2. Uso aceitável</h2>
+<p>Você concorda em não:</p>
+<ul>
+    <li>Usar o App para atividades ilegais</li>
+    <li>Perturbar, modificar ou fazer engenharia reversa do App</li>
+    <li>Interferir na segurança da rede ou no desempenho do App</li>
+</ul>
+
+<h2>3. Política de não registro</h2>
+<p>O {{APP}} não coleta nem armazena:</p>
+<ul>
+    <li>Histórico de navegação</li>
+    <li>Consultas DNS</li>
+    <li>Endereços IP (originais ou atribuídos)</li>
+    <li>Horários de conexão ou duração da sessão</li>
+    <li>Dados de identificação pessoal</li>
+</ul>
+
+<h2>4. Serviços de terceiros</h2>
+<p>Utilizamos:</p>
+<ul>
+    <li>Google AdMob (anúncios)</li>
+    <li>Firebase Crashlytics (relatórios de falhas)</li>
+</ul>
+
+<h2>5. Anúncios</h2>
+<p>Ao usar o App, você concorda que anúncios de terceiros podem ser exibidos. Os provedores de anúncios podem coletar dados anônimos necessários para a veiculação.</p>
+
+<h2>6. Isenção de garantias</h2>
+<p>O App é fornecido "no estado em que se encontra", sem quaisquer garantias, incluindo:</p>
+<ul>
+    <li>Disponibilidade</li>
+    <li>Funcionamento sem erros</li>
+    <li>Segurança completa</li>
+    <li>Compatibilidade com todos os dispositivos</li>
+</ul>
+
+<h2>7. Limitação de responsabilidade</h2>
+<p>O {{APP}} não se responsabiliza por:</p>
+<ul>
+    <li>Perda de dados</li>
+    <li>Interrupções do serviço</li>
+    <li>Violações de segurança causadas por ameaças externas</li>
+    <li>Danos indiretos ou incidentais</li>
+</ul>
+
+<h2>8. Rescisão</h2>
+<p>Podemos encerrar seu acesso ao App a qualquer momento em casos de uso indevido ou violação destes Termos.</p>
+
+<h2>9. Alterações</h2>
+<p>Podemos revisar estes Termos a qualquer momento. O uso continuado do App significa que você aceita os Termos atualizados.</p>
+
+<h2>10. Legislação aplicável</h2>
+<p>Estes Termos são regidos pelas leis da sua região ou país de residência.</p>
+
+<div class="contact-info">
+    <h2>11. Fale conosco</h2>
+    <p><strong>E-mail:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+</div>
+
+`
+  },
+  "tr": {
+    label: "Türkçe",
+    dir: "ltr",
+    title: "Şartlar ve Koşullar",
+    updated: "Son Güncelleme: 15 Kasım 2025",
+    tech: {
+      vpn: `<p>{{APP}}, Android VpnService altyapısını kullanarak yerel bir DNS-tabanlı VPN işlevi sunar. Harici VPN sunucuları veya IP değiştirme hizmeti sağlamaz.</p>`,
+      dns: `<p>{{APP}}, Apple Network Extension altyapısını kullanarak yerel bir DNS yapılandırması uygular. Harici VPN sunucuları veya IP değiştirme hizmeti sağlamaz; trafiğiniz sunucularımız üzerinden geçmez, yalnızca cihazınızın kullandığı DNS sunucusu değişir.</p>`,
+    },
+    body: `
+<p>{{APP}} uygulamasını indirerek veya kullanarak bu Şartlar ve Koşullar’ı kabul etmiş olursunuz. Kabul etmiyorsanız lütfen uygulamayı kaldırın.</p>
+
+<h2>1. Hizmetin Tanımı</h2>
+    {{TECH}}
+
+    <h2>2. Kabul Edilebilir Kullanım</h2>
+    <ul>
+        <li>Uygulamayı yalnızca yasal amaçlarla kullanmak</li>
+        <li>Uygulamanın işleyişine müdahale etmemek</li>
+        <li>Mühendislik tersine çevirme, hack vb. işlemler yapmamak</li>
+    </ul>
+
+    <h2>3. Kayıt Tutmama Politikası (No-Logs)</h2>
+    <ul>
+        <li>Tarama geçmişi</li>
+        <li>DNS sorguları</li>
+        <li>IP adresleri</li>
+        <li>Bağlantı zaman bilgileri</li>
+        <li>Kişisel kimlik bilgileri</li>
+    </ul>
+    <p>Bu verilerin hiçbiri toplanmaz veya saklanmaz.</p>
+
+    <h2>4. Üçüncü Taraf Hizmetleri</h2>
+    <ul>
+        <li>Google AdMob</li>
+        <li>Firebase Crashlytics</li>
+    </ul>
+
+    <h2>5. Reklamlar</h2>
+    <p>Uygulamada reklam gösterilebilir. Bu reklamların gerektirdiği anonim veriler üçüncü taraf sağlayıcılar tarafından toplanabilir.</p>
+
+    <h2>6. Garantilerin Reddi</h2>
+    <ul>
+        <li>Kesintisiz hizmet garantisi</li>
+        <li>Hatasız çalışma</li>
+        <li>Tam güvenlik</li>
+        <li>Tüm cihazlarla uyumluluk</li>
+    </ul>
+
+    <h2>7. Sorumluluk Sınırlaması</h2>
+    <ul>
+        <li>Veri kaybı</li>
+        <li>Hizmet kesintisi</li>
+        <li>Dış kaynaklı güvenlik problemleri</li>
+        <li>Dolaylı veya rastlantısal zararlar</li>
+    </ul>
+
+    <h2>8. Hizmetin Sonlandırılması</h2>
+    <p>Kötüye kullanım veya şartların ihlali durumunda hizmetinizi sonlandırma hakkına sahibiz.</p>
+
+    <h2>9. Değişiklikler</h2>
+    <p>Bu şartlar zaman zaman güncellenebilir. Uygulamayı kullanmaya devam etmek yeni şartları kabul ettiğiniz anlamına gelir.</p>
+
+    <h2>10. Geçerli Hukuk</h2>
+    <p>Şartlar, bulunduğunuz ülkenin yürürlükteki yasalarına tabidir.</p>
+
+    <div class="contact-info">
+        <h2>11. İletişim</h2>
+        <p>E-posta: <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+`
+  },
+  "ru": {
+    label: "Русский",
+    dir: "ltr",
+    title: "Условия использования",
+    updated: "Последнее обновление: 15 ноября 2025 г.",
+    tech: {
+      vpn: `<p>{{APP}} обеспечивает локальное подключение DNS-типа с использованием API VpnService в Android. Он не предоставляет внешних VPN-серверов и не меняет IP-адрес. Вся обработка DNS происходит локально на вашем устройстве.</p>`,
+      dns: `<p>{{APP}} применяет локальную конфигурацию DNS с использованием фреймворка Network Extension от Apple. Он не предоставляет внешних VPN-серверов и не меняет IP-адрес. Ваш трафик не проходит через наши серверы — меняется только DNS-резолвер, который запрашивает устройство.</p>`,
+    },
+    body: `
+
+<p>Устанавливая или используя {{APP}} («Приложение»), вы соглашаетесь с настоящими Условиями. Если вы не согласны, пожалуйста, удалите Приложение.</p>
+
+<h2>1. Описание услуги</h2>
+{{TECH}}
+
+<h2>2. Допустимое использование</h2>
+<p>Вы обязуетесь не:</p>
+<ul>
+    <li>использовать Приложение в противоправных целях</li>
+    <li>нарушать работу, изменять или декомпилировать Приложение</li>
+    <li>вмешиваться в сетевую безопасность или производительность приложения</li>
+</ul>
+
+<h2>3. Политика отсутствия журналов</h2>
+<p>{{APP}} не собирает и не хранит:</p>
+<ul>
+    <li>историю просмотров</li>
+    <li>DNS-запросы</li>
+    <li>IP-адреса (исходные или назначенные)</li>
+    <li>отметки времени подключения и длительность сессии</li>
+    <li>персональные данные</li>
+</ul>
+
+<h2>4. Сторонние сервисы</h2>
+<p>Мы используем:</p>
+<ul>
+    <li>Google AdMob (реклама)</li>
+    <li>Firebase Crashlytics (отчёты о сбоях)</li>
+</ul>
+
+<h2>5. Реклама</h2>
+<p>Используя Приложение, вы соглашаетесь с показом сторонней рекламы. Рекламные провайдеры могут собирать анонимные данные, необходимые для её показа.</p>
+
+<h2>6. Отказ от гарантий</h2>
+<p>Приложение предоставляется «как есть», без каких-либо гарантий, включая:</p>
+<ul>
+    <li>доступность</li>
+    <li>работу без ошибок</li>
+    <li>полную безопасность</li>
+    <li>совместимость со всеми устройствами</li>
+</ul>
+
+<h2>7. Ограничение ответственности</h2>
+<p>{{APP}} не несёт ответственности за:</p>
+<ul>
+    <li>потерю данных</li>
+    <li>перебои в работе сервиса</li>
+    <li>нарушения безопасности, вызванные внешними угрозами</li>
+    <li>косвенный или случайный ущерб</li>
+</ul>
+
+<h2>8. Прекращение доступа</h2>
+<p>Мы вправе в любой момент прекратить ваш доступ к Приложению в случае злоупотребления или нарушения настоящих Условий.</p>
+
+<h2>9. Изменения</h2>
+<p>Мы можем пересматривать настоящие Условия в любое время. Продолжение использования Приложения означает принятие обновлённых Условий.</p>
+
+<h2>10. Применимое право</h2>
+<p>Настоящие Условия регулируются законодательством вашего региона или страны проживания.</p>
+
+<div class="contact-info">
+    <h2>11. Связаться с нами</h2>
+    <p><strong>Эл. почта:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+</div>
+
+`
+  },
+  "ur": {
+    label: "اردو",
+    dir: "rtl",
+    title: "شرائط و ضوابط",
+    updated: "آخری تازہ کاری: ۱۵ نومبر ۲۰۲۵",
+    tech: {
+      vpn: `<p>{{APP}} اینڈرائیڈ کے VpnService API کے ذریعے مقامی DNS طرز کا کنکشن فراہم کرتا ہے۔ یہ بیرونی VPN سرورز یا IP تبدیل کرنے کی سہولت نہیں دیتا۔ تمام DNS پروسیسنگ آپ کے آلے پر ہوتی ہے۔</p>`,
+      dns: `<p>{{APP}} ایپل کے Network Extension فریم ورک کے ذریعے مقامی DNS ترتیب لاگو کرتا ہے۔ یہ بیرونی VPN سرورز یا IP تبدیل کرنے کی سہولت نہیں دیتا۔ آپ کا ٹریفک ہمارے سرورز سے نہیں گزرتا — صرف آپ کے آلے کا DNS ریزولور بدلتا ہے۔</p>`,
+    },
+    body: `
+
+<p>{{APP}} ("ایپ") انسٹال یا استعمال کرنے سے آپ ان شرائط و ضوابط سے اتفاق کرتے ہیں۔ اگر آپ متفق نہیں ہیں تو براہِ کرم ایپ فوراً حذف کر دیں۔</p>
+
+<h2>۱. سروس کی تفصیل</h2>
+{{TECH}}
+
+<h2>۲. قابلِ قبول استعمال</h2>
+<p>آپ اتفاق کرتے ہیں کہ:</p>
+<ul>
+    <li>ایپ کو غیر قانونی سرگرمیوں کے لیے استعمال نہیں کریں گے</li>
+    <li>ایپ میں خلل، ترمیم یا ریورس انجینئرنگ نہیں کریں گے</li>
+    <li>نیٹ ورک سیکیورٹی یا ایپ کی کارکردگی میں مداخلت نہیں کریں گے</li>
+</ul>
+
+<h2>۳. نو-لاگز پالیسی</h2>
+<p>{{APP}} درج ذیل جمع یا محفوظ نہیں کرتا:</p>
+<ul>
+    <li>براؤزنگ ہسٹری</li>
+    <li>DNS درخواستیں</li>
+    <li>IP پتے (اصل یا تفویض کردہ)</li>
+    <li>کنکشن کا وقت یا دورانیہ</li>
+    <li>ذاتی شناختی ڈیٹا</li>
+</ul>
+
+<h2>۴. فریقِ ثالث خدمات</h2>
+<p>ہم استعمال کرتے ہیں:</p>
+<ul>
+    <li>Google AdMob (اشتہارات)</li>
+    <li>Firebase Crashlytics (کریش رپورٹنگ)</li>
+</ul>
+
+<h2>۵. اشتہارات</h2>
+<p>ایپ استعمال کر کے آپ اتفاق کرتے ہیں کہ فریقِ ثالث کے اشتہارات دکھائے جا سکتے ہیں۔ اشتہاری فراہم کنندگان ضروری گمنام ڈیٹا جمع کر سکتے ہیں۔</p>
+
+<h2>۶. ضمانتوں سے دستبرداری</h2>
+<p>ایپ "جیسی ہے" کی بنیاد پر بغیر کسی ضمانت کے فراہم کی جاتی ہے، بشمول:</p>
+<ul>
+    <li>دستیابی</li>
+    <li>بلا نقص کارکردگی</li>
+    <li>مکمل سیکیورٹی</li>
+    <li>تمام آلات سے مطابقت</li>
+</ul>
+
+<h2>۷. ذمہ داری کی حد</h2>
+<p>{{APP}} ان کا ذمہ دار نہیں:</p>
+<ul>
+    <li>ڈیٹا کا نقصان</li>
+    <li>سروس میں تعطل</li>
+    <li>بیرونی خطرات سے سیکیورٹی کی خلاف ورزی</li>
+    <li>بالواسطہ یا حادثاتی نقصانات</li>
+</ul>
+
+<h2>۸. اختتام</h2>
+<p>غلط استعمال یا ان شرائط کی خلاف ورزی کی صورت میں ہم کسی بھی وقت ایپ تک آپ کی رسائی ختم کر سکتے ہیں۔</p>
+
+<h2>۹. تبدیلیاں</h2>
+<p>ہم ان شرائط پر کسی بھی وقت نظرثانی کر سکتے ہیں۔ ایپ کا مسلسل استعمال نئی شرائط کی قبولیت سمجھا جائے گا۔</p>
+
+<h2>۱۰. قابلِ اطلاق قانون</h2>
+<p>یہ شرائط آپ کے علاقے یا ملکِ رہائش کے قوانین کے تابع ہیں۔</p>
+
+<div class="contact-info">
+    <h2>۱۱. ہم سے رابطہ کریں</h2>
+    <p><strong>ای میل:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+</div>
+
+`
+  },
+  "ar": {
+    label: "العربية",
+    dir: "rtl",
+    title: "الشروط والأحكام",
+    updated: "آخر تحديث: ١٥ نوفمبر ٢٠٢٥",
+    tech: {
+      vpn: `<p>{{APP}} يوفّر اتصالًا محليًا بنمط DNS باستخدام واجهة VpnService في أندرويد. وهو لا يوفّر خوادم VPN خارجية ولا خدمات تغيير عنوان IP. تتم كل معالجة DNS محليًا على جهازك.</p>`,
+      dns: `<p>{{APP}} يطبّق إعدادات DNS محلية باستخدام إطار Network Extension من Apple. وهو لا يوفّر خوادم VPN خارجية ولا خدمات تغيير عنوان IP. لا يمر تدفّق بياناتك عبر خوادمنا — يتغيّر فقط مُحلِّل DNS الذي يستعلمه جهازك.</p>`,
+    },
+    body: `
+
+<p>بتثبيت {{APP}} ("التطبيق") أو استخدامه، فإنك توافق على هذه الشروط والأحكام. إذا لم توافق، يُرجى إزالة التطبيق فورًا.</p>
+
+<h2>١. وصف الخدمة</h2>
+{{TECH}}
+
+<h2>٢. الاستخدام المقبول</h2>
+<p>أنت توافق على عدم:</p>
+<ul>
+    <li>استخدام التطبيق في أنشطة غير قانونية</li>
+    <li>تعطيل التطبيق أو تعديله أو إجراء هندسة عكسية له</li>
+    <li>التدخّل في أمان الشبكة أو أداء التطبيق</li>
+</ul>
+
+<h2>٣. سياسة عدم الاحتفاظ بالسجلات</h2>
+<p>{{APP}} لا يجمع ولا يخزّن:</p>
+<ul>
+    <li>سجل التصفّح</li>
+    <li>استعلامات DNS</li>
+    <li>عناوين IP (الأصلية أو المُخصّصة)</li>
+    <li>أوقات الاتصال أو مدة الجلسة</li>
+    <li>بيانات الهوية الشخصية</li>
+</ul>
+
+<h2>٤. خدمات الطرف الثالث</h2>
+<p>نستخدم:</p>
+<ul>
+    <li>Google AdMob (الإعلانات)</li>
+    <li>Firebase Crashlytics (تقارير الأعطال)</li>
+</ul>
+
+<h2>٥. الإعلانات</h2>
+<p>باستخدامك للتطبيق، فإنك توافق على عرض إعلانات من أطراف ثالثة. وقد يجمع مزوّدو الإعلانات بيانات مجهولة لازمة لعرضها.</p>
+
+<h2>٦. إخلاء المسؤولية عن الضمانات</h2>
+<p>يُقدَّم التطبيق "كما هو" دون أي ضمانات، بما في ذلك:</p>
+<ul>
+    <li>التوافر</li>
+    <li>الأداء الخالي من الأخطاء</li>
+    <li>الأمان الكامل</li>
+    <li>التوافق مع جميع الأجهزة</li>
+</ul>
+
+<h2>٧. حدود المسؤولية</h2>
+<p>{{APP}} غير مسؤول عن:</p>
+<ul>
+    <li>فقدان البيانات</li>
+    <li>انقطاع الخدمة</li>
+    <li>الاختراقات الأمنية الناتجة عن تهديدات خارجية</li>
+    <li>الأضرار غير المباشرة أو العرضية</li>
+</ul>
+
+<h2>٨. الإنهاء</h2>
+<p>يجوز لنا إنهاء وصولك إلى التطبيق في أي وقت في حالات إساءة الاستخدام أو مخالفة هذه الشروط.</p>
+
+<h2>٩. التغييرات</h2>
+<p>قد نراجع هذه الشروط في أي وقت. ويعني استمرارك في استخدام التطبيق قبولك للشروط المحدَّثة.</p>
+
+<h2>١٠. القانون الحاكم</h2>
+<p>تخضع هذه الشروط لقوانين منطقتك أو بلد إقامتك.</p>
+
+<div class="contact-info">
+    <h2>١١. تواصل معنا</h2>
+    <p><strong>البريد الإلكتروني:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+</div>
+
+`
+  },
   "fa": {
     label: "دری",
     dir: "rtl",
@@ -139,6 +836,8 @@ var DOCS = {
       dns: `<p>{{APP}} یک پیکربندی محلی DNS است که از طریق Network Extension اپل در داخل دستگاه شما کار می‌کند. ترافیک شما از سرورهای ما عبور نمی‌کند و تنها سرور DNS دستگاه شما تغییر می‌کند.</p>`,
     },
     body: `
+<p>با نصب یا استفاده از {{APP}} شما با این شرایط و ضوابط موافقت می‌کنید. در صورت عدم موافقت، لطفاً اپلیکیشن را حذف نمایید.</p>
+
 <h2>۱. معرفی خدمات</h2>
     {{TECH}}
 
@@ -209,6 +908,8 @@ var DOCS = {
       dns: `<p>{{APP}} ستاسو غوره شوي DNS سرورونه د Apple Network Extension له لارې ستاسو په وسیله کې پلي کوي. دا هېڅ بهرنی VPN سرور یا د IP بدلولو سیستم نه برابروي. ستاسو ترافیک زموږ سرورونو ته نه لېږدول کېږي، یوازې ستاسو د DNS پته بدلېږي.</p>`,
     },
     body: `
+<p>د {{APP}} د نصب یا کارولو په وسیله، تاسو د دې شرایطو او مقرراتو منلو ته موافقې یاست. که موافق نه یاست، مهرباني وکړئ اپلکېشن حذف کړئ.</p>
+
 <h2>۱. د خدمت تشریح</h2>
     {{TECH}}
 
@@ -273,73 +974,82 @@ var DOCS = {
         <p><strong>ایمیل:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
 `
   },
-  "tr": {
-    label: "Türkçe",
+  "hi": {
+    label: "हिन्दी",
     dir: "ltr",
-    title: "Şartlar ve Koşullar",
-    updated: "Son Güncelleme: 15 Kasım 2025",
+    title: "नियम और शर्तें",
+    updated: "अंतिम अद्यतन: 15 नवंबर 2025",
     tech: {
-      vpn: `<p>{{APP}}, Android VpnService altyapısını kullanarak yerel bir DNS-tabanlı VPN işlevi sunar. Harici VPN sunucuları veya IP değiştirme hizmeti sağlamaz.</p>`,
-      dns: `<p>{{APP}}, Apple Network Extension altyapısını kullanarak yerel bir DNS yapılandırması uygular. Harici VPN sunucuları veya IP değiştirme hizmeti sağlamaz; trafiğiniz sunucularımız üzerinden geçmez, yalnızca cihazınızın kullandığı DNS sunucusu değişir.</p>`,
+      vpn: `<p>{{APP}} Android के VpnService API का उपयोग करके एक स्थानीय DNS-शैली VPN कनेक्शन प्रदान करता है। यह बाहरी VPN सर्वर या IP बदलने की सेवा नहीं देता। सारी DNS प्रोसेसिंग आपके डिवाइस पर ही होती है।</p>`,
+      dns: `<p>{{APP}} Apple के Network Extension फ़्रेमवर्क का उपयोग करके एक स्थानीय DNS कॉन्फ़िगरेशन लागू करता है। यह बाहरी VPN सर्वर या IP बदलने की सेवा नहीं देता। आपका ट्रैफ़िक हमारे सर्वर से नहीं गुज़रता — केवल आपके डिवाइस का DNS रिज़ॉल्वर बदलता है।</p>`,
     },
     body: `
-<h2>1. Hizmetin Tanımı</h2>
-    {{TECH}}
 
-    <h2>2. Kabul Edilebilir Kullanım</h2>
-    <ul>
-        <li>Uygulamayı yalnızca yasal amaçlarla kullanmak</li>
-        <li>Uygulamanın işleyişine müdahale etmemek</li>
-        <li>Mühendislik tersine çevirme, hack vb. işlemler yapmamak</li>
-    </ul>
+<p>{{APP}} ("ऐप") को इंस्टॉल या उपयोग करके, आप इन नियमों और शर्तों से सहमत होते हैं। यदि आप सहमत नहीं हैं, तो कृपया ऐप तुरंत अनइंस्टॉल करें।</p>
 
-    <h2>3. Kayıt Tutmama Politikası (No-Logs)</h2>
-    <ul>
-        <li>Tarama geçmişi</li>
-        <li>DNS sorguları</li>
-        <li>IP adresleri</li>
-        <li>Bağlantı zaman bilgileri</li>
-        <li>Kişisel kimlik bilgileri</li>
-    </ul>
-    <p>Bu verilerin hiçbiri toplanmaz veya saklanmaz.</p>
+<h2>1. सेवा का विवरण</h2>
+{{TECH}}
 
-    <h2>4. Üçüncü Taraf Hizmetleri</h2>
-    <ul>
-        <li>Google AdMob</li>
-        <li>Firebase Crashlytics</li>
-    </ul>
+<h2>2. स्वीकार्य उपयोग</h2>
+<p>आप सहमत हैं कि आप:</p>
+<ul>
+    <li>ऐप का उपयोग अवैध गतिविधियों के लिए नहीं करेंगे</li>
+    <li>ऐप को बाधित, संशोधित या रिवर्स-इंजीनियर नहीं करेंगे</li>
+    <li>नेटवर्क सुरक्षा या ऐप के प्रदर्शन में हस्तक्षेप नहीं करेंगे</li>
+</ul>
 
-    <h2>5. Reklamlar</h2>
-    <p>Uygulamada reklam gösterilebilir. Bu reklamların gerektirdiği anonim veriler üçüncü taraf sağlayıcılar tarafından toplanabilir.</p>
+<h2>3. नो-लॉग्स नीति</h2>
+<p>{{APP}} निम्नलिखित एकत्र या संग्रहीत नहीं करता:</p>
+<ul>
+    <li>ब्राउज़िंग इतिहास</li>
+    <li>DNS क्वेरी</li>
+    <li>IP पते (मूल या असाइन किए गए)</li>
+    <li>कनेक्शन समय या सत्र अवधि</li>
+    <li>व्यक्तिगत पहचान डेटा</li>
+</ul>
 
-    <h2>6. Garantilerin Reddi</h2>
-    <ul>
-        <li>Kesintisiz hizmet garantisi</li>
-        <li>Hatasız çalışma</li>
-        <li>Tam güvenlik</li>
-        <li>Tüm cihazlarla uyumluluk</li>
-    </ul>
+<h2>4. तृतीय-पक्ष सेवाएँ</h2>
+<p>हम उपयोग करते हैं:</p>
+<ul>
+    <li>Google AdMob (विज्ञापन)</li>
+    <li>Firebase Crashlytics (क्रैश रिपोर्टिंग)</li>
+</ul>
 
-    <h2>7. Sorumluluk Sınırlaması</h2>
-    <ul>
-        <li>Veri kaybı</li>
-        <li>Hizmet kesintisi</li>
-        <li>Dış kaynaklı güvenlik problemleri</li>
-        <li>Dolaylı veya rastlantısal zararlar</li>
-    </ul>
+<h2>5. विज्ञापन</h2>
+<p>ऐप का उपयोग करके आप सहमत होते हैं कि तृतीय-पक्ष विज्ञापन दिखाए जा सकते हैं। विज्ञापन प्रदाता विज्ञापन देने के लिए आवश्यक अनाम डेटा एकत्र कर सकते हैं।</p>
 
-    <h2>8. Hizmetin Sonlandırılması</h2>
-    <p>Kötüye kullanım veya şartların ihlali durumunda hizmetinizi sonlandırma hakkına sahibiz.</p>
+<h2>6. वारंटी अस्वीकरण</h2>
+<p>ऐप "जैसा है" के आधार पर, बिना किसी गारंटी के प्रदान किया जाता है, जिसमें शामिल हैं:</p>
+<ul>
+    <li>उपलब्धता</li>
+    <li>त्रुटि-रहित प्रदर्शन</li>
+    <li>पूर्ण सुरक्षा</li>
+    <li>डिवाइस अनुकूलता</li>
+</ul>
 
-    <h2>9. Değişiklikler</h2>
-    <p>Bu şartlar zaman zaman güncellenebilir. Uygulamayı kullanmaya devam etmek yeni şartları kabul ettiğiniz anlamına gelir.</p>
+<h2>7. दायित्व की सीमा</h2>
+<p>{{APP}} इनके लिए उत्तरदायी नहीं है:</p>
+<ul>
+    <li>डेटा की हानि</li>
+    <li>सेवा में बाधा</li>
+    <li>बाहरी ख़तरों से हुई सुरक्षा चूक</li>
+    <li>अप्रत्यक्ष या आकस्मिक क्षति</li>
+</ul>
 
-    <h2>10. Geçerli Hukuk</h2>
-    <p>Şartlar, bulunduğunuz ülkenin yürürlükteki yasalarına tabidir.</p>
+<h2>8. समाप्ति</h2>
+<p>दुरुपयोग या इन शर्तों के उल्लंघन की स्थिति में हम किसी भी समय ऐप तक आपकी पहुँच समाप्त कर सकते हैं।</p>
 
-    <div class="contact-info">
-        <h2>11. İletişim</h2>
-        <p>E-posta: <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+<h2>9. परिवर्तन</h2>
+<p>हम इन शर्तों में कभी भी संशोधन कर सकते हैं। ऐप का निरंतर उपयोग अद्यतन शर्तों की स्वीकृति माना जाएगा।</p>
+
+<h2>10. शासी कानून</h2>
+<p>ये शर्तें आपके क्षेत्र या निवास देश के कानूनों द्वारा शासित होती हैं।</p>
+
+<div class="contact-info">
+    <h2>11. संपर्क करें</h2>
+    <p><strong>ईमेल:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+</div>
+
 `
   },
 };
