@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tez VPN - Terms & Conditions</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+    :root{--primary-color:#007bff;--secondary-color:#f8f9fa;--text-color:#343a40;
+      --light-text-color:#6c757d;--container-bg:#fff;--border-color:#e9ecef}
+    body{font-family:'Poppins',sans-serif;line-height:1.65;margin:0;padding:20px;
+      background-color:var(--secondary-color);color:var(--text-color)}
+    .container{max-width:850px;margin:auto;background:var(--container-bg);padding:40px;
+      border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+    .header{text-align:center;margin-bottom:30px}
+    .header .logo{margin-bottom:20px}
+    .header .logo img{max-width:100px;height:auto;display:block;margin:0 auto}
+    .header h1{color:var(--primary-color);font-size:2rem;font-weight:600;margin-top:0}
+    .header .last-updated{font-style:italic;color:var(--light-text-color);font-size:.9rem}
+    .lang-switch{margin-top:18px}
+    .lang-switch select{font-family:inherit;font-size:.9rem;color:var(--text-color);
+      padding:8px 14px;border:1px solid var(--border-color);border-radius:8px;
+      background:var(--container-bg);cursor:pointer}
+    .content h2{font-size:1.6rem;color:var(--primary-color);border-bottom:2px solid var(--border-color);
+      padding-bottom:10px;margin-top:2.5rem}
+    .content h3{font-size:1.2rem;color:var(--text-color);margin-top:1.5rem}
+    .content p,.content ul{font-size:1rem;color:var(--text-color)}
+    .content ul{list-style:none;padding-left:0}
+    .content li{position:relative;padding-left:25px;margin-bottom:10px}
+    .content li::before{content:'\2022';color:var(--primary-color);font-size:1.2rem;
+      position:absolute;left:0;top:50%;transform:translateY(-50%)}
+    [dir="rtl"] .content ul{padding-right:0}
+    [dir="rtl"] .content li{padding-left:0;padding-right:25px}
+    [dir="rtl"] .content li::before{left:auto;right:0}
+    .contact-info{text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border-color)}
+    a{color:var(--primary-color);text-decoration:none;font-weight:600}
+    a:hover{text-decoration:underline}
+    @media (max-width:600px){.container{padding:24px}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="logo"><img id="logo" src="tezvpn_logo.png" alt="logo"></div>
+    <h1 id="doc-title"></h1>
+    <p class="last-updated" id="last-updated"></p>
+    <div class="lang-switch"><select id="lang-select" aria-label="Language"></select></div>
+  </div>
+  <div class="content" id="content"></div>
+</div>
+<script>
+// One page for every language and for both apps.
+// Usage: ?lang=<code>&app=vpn|dns   e.g. ?lang=fa&app=dns
+var APPS = {
+  vpn: { name: "Tez VPN", logo: "tezvpn_logo.png" },
+  dns: { name: "Tez DNS", logo: "appicon.png" }
+};
+var DOCS = {
+  "en": {
+    label: "English",
+    dir: "ltr",
+    title: "Terms &amp; Conditions",
+    updated: "Last Updated: November 15, 2025",
+    tech: {
+      vpn: `<p>{{APP}} provides a local DNS-style VPN connection using Android’s VpnService API. It does not provide external VPN servers or IP-changing services. All DNS processing happens locally on your device.</p>`,
+      dns: `<p>{{APP}} applies a local DNS configuration using Apple’s Network Extension framework. It does not provide external VPN servers or IP-changing services. Your traffic is not routed through our servers — only the DNS resolver your device queries is changed.</p>`,
+    },
+    body: `
+<h2>1. Description of the Service</h2>
+        {{TECH}}
+
+        <h2>2. Acceptable Use</h2>
+        <p>You agree not to:</p>
+        <ul>
+            <li>Use the App for illegal activities</li>
+            <li>Disrupt, modify, or reverse-engineer the App</li>
+            <li>Interfere with network security or app performance</li>
+        </ul>
+
+        <h2>3. No-Logs Policy</h2>
+        <p>{{APP}} does not collect or store:</p>
+        <ul>
+            <li>Browsing history</li>
+            <li>DNS queries</li>
+            <li>IP addresses (original or assigned)</li>
+            <li>Connection timestamps or session duration</li>
+            <li>Personal identification data</li>
+        </ul>
+
+        <h2>4. Third-Party Services</h2>
+        <p>We use:</p>
+        <ul>
+            <li>Google AdMob (ads)</li>
+            <li>Firebase Crashlytics (crash reporting)</li>
+        </ul>
+
+        <h2>5. Advertisements</h2>
+        <p>By using the App, you agree that third-party ads may be shown. Ad providers may collect anonymous data required for ad delivery.</p>
+
+        <h2>6. Disclaimer of Warranties</h2>
+        <p>The App is provided “as-is” without any guarantees, including:</p>
+        <ul>
+            <li>Availability</li>
+            <li>Error-free performance</li>
+            <li>Complete security</li>
+            <li>Device compatibility</li>
+        </ul>
+
+        <h2>7. Limitation of Liability</h2>
+        <p>{{APP}} is not liable for:</p>
+        <ul>
+            <li>Loss of data</li>
+            <li>Service interruptions</li>
+            <li>Security breaches caused by external threats</li>
+            <li>Indirect or incidental damages</li>
+        </ul>
+
+        <h2>8. Termination</h2>
+        <p>We may terminate your access to the App at any time in cases of misuse or violation of these Terms.</p>
+
+        <h2>9. Changes</h2>
+        <p>We may revise these Terms at any time. Continued use of the App means you accept the updated Terms.</p>
+
+        <h2>10. Governing Law</h2>
+        <p>These Terms are governed by the laws of your region or country of residence.</p>
+
+        <div class="contact-info">
+            <h2>11. Contact Us</h2>
+            <p>Email: <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+`
+  },
+  "fa": {
+    label: "دری",
+    dir: "rtl",
+    title: "شرایط و ضوابط",
+    updated: "آخرین به‌روزرسانی: ۱۵ نوامبر ۲۰۲۵",
+    tech: {
+      vpn: `<p>{{APP}} یک سیستم محلی DNS-VPN است که از طریق VpnService در داخل دستگاه شما کار می‌کند و هیچ سرور خارجی ارائه نمی‌کند.</p>`,
+      dns: `<p>{{APP}} یک پیکربندی محلی DNS است که از طریق Network Extension اپل در داخل دستگاه شما کار می‌کند. ترافیک شما از سرورهای ما عبور نمی‌کند و تنها سرور DNS دستگاه شما تغییر می‌کند.</p>`,
+    },
+    body: `
+<h2>۱. معرفی خدمات</h2>
+    {{TECH}}
+
+    <h2>۲. استفاده مجاز</h2>
+    <ul>
+        <li>استفاده تنها برای مقاصد قانونی</li>
+        <li>عدم ایجاد اختلال در عملکرد اپلیکیشن</li>
+        <li>عدم مهندسی معکوس یا هک برنامه</li>
+    </ul>
+
+    <h2>۳. پالیسی بدون لاگ</h2>
+    <p>ما هیچ‌گونه معلومات زیر را ذخیره نمی‌کنیم:</p>
+    <ul>
+        <li>تاریخچه مرور</li>
+        <li>درخواست‌های DNS</li>
+        <li>آدرس آی‌پی</li>
+        <li>زمان و مدت اتصال</li>
+        <li>معلومات هویتی</li>
+    </ul>
+
+    <h2>۴. خدمات جانبی</h2>
+    <p>اپلیکیشن از خدمات زیر استفاده می‌کند:</p>
+    <ul>
+        <li>Google AdMob</li>
+        <li>Firebase Crashlytics</li>
+    </ul>
+
+    <h2>۵. تبلیغات</h2>
+    <p>نمایش تبلیغات بخشی از خدمات اپلیکیشن است.</p>
+
+    <h2>۶. عدم تضمین</h2>
+    <ul>
+        <li>دسترسی ۲۴ ساعته</li>
+        <li>بدون خطا بودن</li>
+        <li>امنیت کامل</li>
+        <li>سازگاری با تمام دستگاه‌ها</li>
+    </ul>
+
+    <h2>۷. محدودیت مسئولیت</h2>
+    <ul>
+        <li>از دست رفتن معلومات</li>
+        <li>قطع خدمات</li>
+        <li>مشکلات امنیتی بیرونی</li>
+        <li>خسارات غیرمستقیم</li>
+    </ul>
+
+    <h2>۸. توقف خدمات</h2>
+    <p>ما حق داریم استفاده شما را در صورت سوءاستفاده، متوقف کنیم.</p>
+
+    <h2>۹. تغییرات</h2>
+    <p>هرگونه تغییر در همین صفحه اعلان می‌شود.</p>
+
+    <h2>۱۰. قوانین حاکم</h2>
+    <p>این شرایط مطابق قوانین کشور محل سکونت شما تفسیر می‌شود.</p>
+
+    <div class="contact-info">
+        <h2>۱۱. تماس با ما</h2>
+        <p><strong>ایمیل:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+`
+  },
+  "ps": {
+    label: "پښتو",
+    dir: "rtl",
+    title: "شرایط او مقررات",
+    updated: "وروستی تازه‌والی: ۱۵ نومبر ۲۰۲۵",
+    tech: {
+      vpn: `<p>{{APP}} یو محلّي DNS-styled VPN دی چې د Android VpnService له لارې کار کوي. دا هېڅ بهرنی VPN سرور یا د IP بدلولو سیستم نه برابروي. ټول DNS پروسس یوازې ستاسو د موبایل په دننه کې ترسره کېږي.</p>`,
+      dns: `<p>{{APP}} ستاسو غوره شوي DNS سرورونه د Apple Network Extension له لارې ستاسو په وسیله کې پلي کوي. دا هېڅ بهرنی VPN سرور یا د IP بدلولو سیستم نه برابروي. ستاسو ترافیک زموږ سرورونو ته نه لېږدول کېږي، یوازې ستاسو د DNS پته بدلېږي.</p>`,
+    },
+    body: `
+<h2>۱. د خدمت تشریح</h2>
+    {{TECH}}
+
+    <h2>۲. د منل شوي استعمال اصول</h2>
+    <p>تاسو موافق یاست چې:</p>
+    <ul>
+        <li>اپ یوازې د قانوني کارونو لپاره وکاروئ</li>
+        <li>د اپ په فعالیت کې مداخله ونه کړئ</li>
+        <li>اپ مه هک کوئ او نه یې مهندسي معکوس کوئ</li>
+    </ul>
+
+    <h2>۳. د لاګ نه ساتلو تګلاره (No-Logs Policy)</h2>
+    <p>{{APP}} هېڅ ډول لاندې معلومات نه ساتي:</p>
+    <ul>
+        <li>د براوزنګ تاریخچه</li>
+        <li>د DNS غوښتنې</li>
+        <li>IP پته (نه اصلي، نه ټاکل شوې)</li>
+        <li>د اتصال وخت یا موده</li>
+        <li>هر ډول هویتي معلومات</li>
+    </ul>
+
+    <h2>۴. دریم‌ګړي خدمات</h2>
+    <p>موږ یوازې لاندې خدمتونه کاروو:</p>
+    <ul>
+        <li>Google AdMob – د اعلانونو لپاره</li>
+        <li>Firebase Crashlytics – د کرش راپورونو لپاره</li>
+    </ul>
+
+    <h2>۵. اعلانونه</h2>
+    <p>تاسو منئ چې اپ کې به اعلانونه ښکاره کېږي. اعلان ورکونکي ممکن ضروري، غیر شخصي معلومات راټول کړي.</p>
+
+    <h2>۶. د ضمانت نه لرل</h2>
+    <p>{{APP}} له هېڅ ډول لاندې ضمانت سره نه وړاندې کېږي:</p>
+    <ul>
+        <li>د ۲۴ ساعته شتون ضمانت</li>
+        <li>د خطا نه شتون</li>
+        <li>مطلق امنیت</li>
+        <li>له ټولو وسایلو سره مطابقت</li>
+    </ul>
+
+    <h2>۷. د مسئولیت محدودیت</h2>
+    <p>{{APP}} د لاندې مواردو مسئول نه دی:</p>
+    <ul>
+        <li>د معلوماتو له لاسه ورکول</li>
+        <li>د خدمتونو پرې کېدل</li>
+        <li>خارجې امنیتي بریدونه</li>
+        <li>غیر مستقیم یا تصادفي زیانونه</li>
+    </ul>
+
+    <h2>۸. د خدمت بندول</h2>
+    <p>موږ حق لرو چې ستاسو استعمال په هر وخت کې د ناوړه استفادې یا د مقرراتو د ماتولو په صورت کې بند کړو.</p>
+
+    <h2>۹. بدلونونه</h2>
+    <p>موږ کولای شو دا شرایط هر وخت بدل کړو. د اپ دوامداره استعمال د نوو شرایطو منل معنا لري.</p>
+
+    <h2>۱۰. حاکم قوانین</h2>
+    <p>دغه شرایط د هغه هېواد د قوانینو له مخې اداره کېږي چې تاسو پکې اوسیږئ.</p>
+
+    <div class="contact-info">
+        <h2>۱۱. اړیکه</h2>
+        <p>هر ډول پوښتنې لپاره:</p>
+        <p><strong>ایمیل:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+`
+  },
+  "tr": {
+    label: "Türkçe",
+    dir: "ltr",
+    title: "Şartlar ve Koşullar",
+    updated: "Son Güncelleme: 15 Kasım 2025",
+    tech: {
+      vpn: `<p>{{APP}}, Android VpnService altyapısını kullanarak yerel bir DNS-tabanlı VPN işlevi sunar. Harici VPN sunucuları veya IP değiştirme hizmeti sağlamaz.</p>`,
+      dns: `<p>{{APP}}, Apple Network Extension altyapısını kullanarak yerel bir DNS yapılandırması uygular. Harici VPN sunucuları veya IP değiştirme hizmeti sağlamaz; trafiğiniz sunucularımız üzerinden geçmez, yalnızca cihazınızın kullandığı DNS sunucusu değişir.</p>`,
+    },
+    body: `
+<h2>1. Hizmetin Tanımı</h2>
+    {{TECH}}
+
+    <h2>2. Kabul Edilebilir Kullanım</h2>
+    <ul>
+        <li>Uygulamayı yalnızca yasal amaçlarla kullanmak</li>
+        <li>Uygulamanın işleyişine müdahale etmemek</li>
+        <li>Mühendislik tersine çevirme, hack vb. işlemler yapmamak</li>
+    </ul>
+
+    <h2>3. Kayıt Tutmama Politikası (No-Logs)</h2>
+    <ul>
+        <li>Tarama geçmişi</li>
+        <li>DNS sorguları</li>
+        <li>IP adresleri</li>
+        <li>Bağlantı zaman bilgileri</li>
+        <li>Kişisel kimlik bilgileri</li>
+    </ul>
+    <p>Bu verilerin hiçbiri toplanmaz veya saklanmaz.</p>
+
+    <h2>4. Üçüncü Taraf Hizmetleri</h2>
+    <ul>
+        <li>Google AdMob</li>
+        <li>Firebase Crashlytics</li>
+    </ul>
+
+    <h2>5. Reklamlar</h2>
+    <p>Uygulamada reklam gösterilebilir. Bu reklamların gerektirdiği anonim veriler üçüncü taraf sağlayıcılar tarafından toplanabilir.</p>
+
+    <h2>6. Garantilerin Reddi</h2>
+    <ul>
+        <li>Kesintisiz hizmet garantisi</li>
+        <li>Hatasız çalışma</li>
+        <li>Tam güvenlik</li>
+        <li>Tüm cihazlarla uyumluluk</li>
+    </ul>
+
+    <h2>7. Sorumluluk Sınırlaması</h2>
+    <ul>
+        <li>Veri kaybı</li>
+        <li>Hizmet kesintisi</li>
+        <li>Dış kaynaklı güvenlik problemleri</li>
+        <li>Dolaylı veya rastlantısal zararlar</li>
+    </ul>
+
+    <h2>8. Hizmetin Sonlandırılması</h2>
+    <p>Kötüye kullanım veya şartların ihlali durumunda hizmetinizi sonlandırma hakkına sahibiz.</p>
+
+    <h2>9. Değişiklikler</h2>
+    <p>Bu şartlar zaman zaman güncellenebilir. Uygulamayı kullanmaya devam etmek yeni şartları kabul ettiğiniz anlamına gelir.</p>
+
+    <h2>10. Geçerli Hukuk</h2>
+    <p>Şartlar, bulunduğunuz ülkenin yürürlükteki yasalarına tabidir.</p>
+
+    <div class="contact-info">
+        <h2>11. İletişim</h2>
+        <p>E-posta: <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+`
+  },
+};
+
+var params = new URLSearchParams(location.search);
+var appKey = (params.get('app') || '').toLowerCase();
+if (!APPS[appKey]) appKey = 'vpn';
+
+function pickLang() {
+  var q = (params.get('lang') || '').toLowerCase().split('-')[0];
+  if (DOCS[q]) return q;
+  var nav = (navigator.language || 'en').toLowerCase().split('-')[0];
+  if (DOCS[nav]) return nav;
+  return 'en';
+}
+
+function render(code) {
+  var doc = DOCS[code] || DOCS.en;
+  var app = APPS[appKey];
+
+  document.documentElement.lang = code;
+  document.documentElement.dir = doc.dir;
+  document.title = app.name + ' - ' + doc.title.replace('&amp;', '&');
+  document.getElementById('logo').src = app.logo;
+  document.getElementById('logo').alt = app.name;
+  document.getElementById('doc-title').innerHTML = doc.title;
+  document.getElementById('last-updated').textContent = doc.updated;
+
+  var body = doc.body.replace('{{TECH}}', doc.tech ? doc.tech[appKey] : '');
+  document.getElementById('content').innerHTML = body.split('{{APP}}').join(app.name);
+}
+
+var select = document.getElementById('lang-select');
+Object.keys(DOCS).forEach(function (code) {
+  var o = document.createElement('option');
+  o.value = code; o.textContent = DOCS[code].label;
+  select.appendChild(o);
+});
+
+var current = pickLang();
+select.value = current;
+select.addEventListener('change', function () {
+  current = select.value;
+  params.set('lang', current);
+  history.replaceState(null, '', location.pathname + '?' + params.toString());
+  render(current);
+});
+render(current);
+</script>
+</body>
+</html>

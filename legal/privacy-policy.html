@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tez VPN - Privacy Policy</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+    :root{--primary-color:#007bff;--secondary-color:#f8f9fa;--text-color:#343a40;
+      --light-text-color:#6c757d;--container-bg:#fff;--border-color:#e9ecef}
+    body{font-family:'Poppins',sans-serif;line-height:1.65;margin:0;padding:20px;
+      background-color:var(--secondary-color);color:var(--text-color)}
+    .container{max-width:850px;margin:auto;background:var(--container-bg);padding:40px;
+      border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+    .header{text-align:center;margin-bottom:30px}
+    .header .logo{margin-bottom:20px}
+    .header .logo img{max-width:100px;height:auto;display:block;margin:0 auto}
+    .header h1{color:var(--primary-color);font-size:2rem;font-weight:600;margin-top:0}
+    .header .last-updated{font-style:italic;color:var(--light-text-color);font-size:.9rem}
+    .lang-switch{margin-top:18px}
+    .lang-switch select{font-family:inherit;font-size:.9rem;color:var(--text-color);
+      padding:8px 14px;border:1px solid var(--border-color);border-radius:8px;
+      background:var(--container-bg);cursor:pointer}
+    .content h2{font-size:1.6rem;color:var(--primary-color);border-bottom:2px solid var(--border-color);
+      padding-bottom:10px;margin-top:2.5rem}
+    .content h3{font-size:1.2rem;color:var(--text-color);margin-top:1.5rem}
+    .content p,.content ul{font-size:1rem;color:var(--text-color)}
+    .content ul{list-style:none;padding-left:0}
+    .content li{position:relative;padding-left:25px;margin-bottom:10px}
+    .content li::before{content:'\2022';color:var(--primary-color);font-size:1.2rem;
+      position:absolute;left:0;top:50%;transform:translateY(-50%)}
+    [dir="rtl"] .content ul{padding-right:0}
+    [dir="rtl"] .content li{padding-left:0;padding-right:25px}
+    [dir="rtl"] .content li::before{left:auto;right:0}
+    .contact-info{text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border-color)}
+    a{color:var(--primary-color);text-decoration:none;font-weight:600}
+    a:hover{text-decoration:underline}
+    @media (max-width:600px){.container{padding:24px}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="logo"><img id="logo" src="tezvpn_logo.png" alt="logo"></div>
+    <h1 id="doc-title"></h1>
+    <p class="last-updated" id="last-updated"></p>
+    <div class="lang-switch"><select id="lang-select" aria-label="Language"></select></div>
+  </div>
+  <div class="content" id="content"></div>
+</div>
+<script>
+// One page for every language and for both apps.
+// Usage: ?lang=<code>&app=vpn|dns   e.g. ?lang=fa&app=dns
+var APPS = {
+  vpn: { name: "Tez VPN", logo: "tezvpn_logo.png" },
+  dns: { name: "Tez DNS", logo: "appicon.png" }
+};
+var DOCS = {
+  "en": {
+    label: "English",
+    dir: "ltr",
+    title: "Privacy Policy",
+    updated: "Last Updated: November 15, 2025",
+    tech: {
+      vpn: `<p>{{APP}} processes DNS and network rules locally on your device through Android's <strong>VpnService</strong>. We do not redirect traffic to external servers — {{APP}} is a local DNS-style tunnel.</p>`,
+      dns: `<p>{{APP}} applies your chosen DNS servers locally on your device through Apple's <strong>Network Extension</strong> framework. We do not redirect traffic to external servers — {{APP}} only changes which DNS resolver your device uses.</p>`,
+    },
+    body: `
+<p>Welcome to {{APP}}! This Privacy Policy explains how {{APP}} ("we," "us," or "our") collects, uses, and safeguards your information when you use our mobile application (the "App"). {{APP}} is designed with privacy in mind and follows a strict no-logs policy.</p>
+
+            <h2>1. Information We Do Not Collect</h2>
+            <p>{{APP}} is a privacy-focused service. We do <strong>not</strong> collect or store any of the following:</p>
+            <ul>
+                <li><strong>No browsing history</strong></li>
+                <li><strong>No DNS queries</strong></li>
+                <li><strong>No connection logs</strong> (no timestamps, session duration, or assigned IP)</li>
+                <li><strong>No online activities</strong></li>
+                <li><strong>No IP addresses</strong> (neither your original IP nor the IP assigned by the VPN)</li>
+                <li><strong>No personal identifiers</strong> such as name, email, phone number</li>
+            </ul>
+
+            <h2>2. Information We Collect Automatically</h2>
+            <p>To operate the App smoothly, we may collect minimal anonymous technical information:</p>
+            <ul>
+                <li><strong>Device Information:</strong> Anonymous device model, OS version.</li>
+                <li><strong>Crash Data:</strong> Through Firebase Crashlytics for detecting and correcting app issues. Crash reports do not contain personal data.</li>
+                <li><strong>App Usage Events:</strong> Basic anonymous data (e.g., VPN started/stopped) to improve service performance.</li>
+            </ul>
+
+            <h3>No Data Leaves Your Device</h3>
+            {{TECH}}
+
+            <h2>3. How We Use the Information</h2>
+            <p>The limited anonymous information we collect is used solely for:</p>
+            <ul>
+                <li>Ensuring the App functions correctly</li>
+                <li>Diagnosing bugs and crashes</li>
+                <li>Improving performance and stability</li>
+            </ul>
+
+            <h2>4. Third-Party Services</h2>
+            <p>We use the following third-party SDKs:</p>
+            <ul>
+                <li><strong>Google AdMob:</strong> To display ads. AdMob may collect anonymous ad-performance data.</li>
+                <li><strong>Firebase Crashlytics:</strong> To diagnose technical issues.</li>
+            </ul>
+            <p>These services may collect anonymous identifiers per their own privacy policies. {{APP}} does not share user data with them beyond what their SDKs collect automatically.</p>
+
+            <h2>5. Data Security</h2>
+            <p>We implement industry-standard measures to protect your data. Since {{APP}} does not store logs or personal data, the risk of exposure is minimal.</p>
+
+            <h2>6. Children's Privacy</h2>
+            <p>{{APP}} is not intended for children under 13. We do not knowingly collect personal information from children.</p>
+
+            <h2>7. Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy occasionally. When changes are made, we will update the "Last Updated" date at the top of the document.</p>
+
+            <div class="contact-info">
+                <h2>8. Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+                <p><strong>Email:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+            </div>
+`
+  },
+  "fa": {
+    label: "دری",
+    dir: "rtl",
+    title: "سیاست حریم خصوصی",
+    updated: "آخرین به‌روزرسانی: ۱۵ نوامبر ۲۰۲۵",
+    body: `
+<p>به {{APP}} خوش آمدید! این سیاست حریم خصوصی توضیح می‌دهد که چگونه {{APP}} («ما» یا «اپلیکیشن») معلومات شما را در هنگام استفاده از اپلیکیشن جمع‌آوری، استفاده و محافظت می‌کند. {{APP}} یک اپلیکیشن خصوصی‌سازی‌شده است و از پالیسی “بدون لاگ” پیروی می‌کند.</p>
+
+            <h2>۱. معلوماتی که ما جمع‌آوری نمی‌کنیم</h2>
+            <p>{{APP}} هیچ نوع معلومات حساس کاربران را ذخیره نمی‌کند. ما هیچ یک از موارد زیر را جمع‌آوری نمی‌کنیم:</p>
+            <ul>
+                <li>تاریخچه مرور اینترنت</li>
+                <li>درخواست‌های DNS</li>
+                <li>لاگ‌های اتصال (زمان شروع یا ختم، مدت اتصال)</li>
+                <li>آدرس آی‌پی اصلی یا آی‌پی اختصاص‌داده‌شده</li>
+                <li>فعالیت‌های آنلاین</li>
+                <li>نام، ایمیل، شماره تماس یا هرگونه معلومات هویتی</li>
+            </ul>
+
+            <p>تمامی پروسس‌های DNS فقط در داخل دستگاه شما انجام می‌شود و هیچ نوع ترافیک به سرورهای ما ارسال نمی‌گردد.</p>
+
+            <h2>۲. معلوماتی که ممکن است خودکار جمع‌آوری شود</h2>
+            <ul>
+                <li>معلومات تخنیکی دستگاه (مدل، نسخه سیستم‌عامل)</li>
+                <li>معلومات کرش اپلیکیشن از طریق Firebase Crashlytics</li>
+                <li>رویدادهای ساده اپلیکیشن (مانند شروع یا توقف VPN)</li>
+            </ul>
+
+            <h2>۳. چگونه از معلومات استفاده می‌کنیم</h2>
+            <ul>
+                <li>بهبود عملکرد اپلیکیشن</li>
+                <li>تشخیص مشکلات تخنیکی</li>
+                <li>افزایش ثبات و کیفیت اپلیکیشن</li>
+            </ul>
+
+            <h2>۴. خدمات جانبی (Third-Party Services)</h2>
+            <ul>
+                <li>Google AdMob – برای نمایش تبلیغات</li>
+                <li>Firebase Crashlytics – برای گزارش کرش‌ها</li>
+            </ul>
+            <p>این خدمات ممکن است معلومات غیرشخصی را مطابق سیاست‌های خودشان جمع‌آوری کنند.</p>
+
+            <h2>۵. امنیت معلومات</h2>
+            <p>چون ما هیچ نوع معلومات حساسی ذخیره نمی‌کنیم، خطر افشا شدن بسیار پایین است.</p>
+
+            <h2>۶. حریم خصوصی کودکان</h2>
+            <p>{{APP}} برای کودکان زیر ۱۳ سال طراحی نشده است.</p>
+
+            <h2>۷. تغییرات</h2>
+            <p>در صورت به‌روزرسانی این سیاست، تاریخ جدید در همین صفحه درج می‌شود.</p>
+
+            <div class="contact-info">
+                <h2>۸. تماس با ما</h2>
+                <p>در صورت داشتن پرسش، با ما تماس بگیرید:</p>
+                <p><strong>ایمیل:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+            </div>
+`
+  },
+  "ps": {
+    label: "پښتو",
+    dir: "rtl",
+    title: "د محرمیت تګلاره",
+    updated: "وروستی تازه‌والی: ۱۵ نومبر ۲۰۲۵",
+    body: `
+<p>{{APP}} ته ښه راغلاست! دا محرمیت تګلاره تشریح کوي چې {{APP}} («موږ») ستاسو معلومات څنګه ساتي، کاروي او خوندي کوي. {{APP}} د محرمیت لپاره جوړ شوی اپ دی او د “هیڅ لاګ نه ساتل” تګلاره تعقیبوي.</p>
+
+            <h2>۱. هغه معلومات چې موږ نه راټولوو</h2>
+            <p>{{APP}} هیڅ ډول حساس یا شخصي معلومات نه راټولوي او نه یې ساتي. موږ لاندې معلومات نه راټولوو:</p>
+            <ul>
+                <li>ستاسو د انټرنټ د براوزنګ تاریخچه</li>
+                <li>د DNS غوښتنې</li>
+                <li>د اتصال لاګونه (پیل، پای، د اتصال موده)</li>
+                <li>ستاسو واقعي یا ټاکل شوی IP</li>
+                <li>ستاسو آنلاین فعالیتونه</li>
+                <li>نوم، ایمیل، شمېره یا نور هویتي معلومات</li>
+            </ul>
+
+            <p>ټولې DNS پروسې یوازې ستاسو د موبایل په دننه کې ترسره کېږي او هیڅ معلومات زموږ سرورونو ته نه لېږل کېږي.</p>
+
+            <h2>۲. هغه معلومات چې ممکن په اوتومات ډول راټول شي</h2>
+            <ul>
+                <li>د وسیلې تخنیکي معلومات (ماډل، OS نسخه)</li>
+                <li>کرش راپورونه د Firebase Crashlytics له لارې</li>
+                <li>د اپ ساده فعالیتونه (لکه VPN پیل او بند)</li>
+            </ul>
+
+            <h2>۳. د معلوماتو کارول</h2>
+            <p>موږ اوتومات معلومات یوازې د لاندې موخو لپاره کاروو:</p>
+            <ul>
+                <li>د اپ فعالیت ښه کول</li>
+                <li>د تخنیکي ستونزو پېژندل</li>
+                <li>د اپ ثبات او کیفیت لوړول</li>
+            </ul>
+
+            <h2>۴. دریم‌ګړي خدمتونه (Third-Party Services)</h2>
+            <ul>
+                <li>Google AdMob – د اعلانونو ښودلو لپاره</li>
+                <li>Firebase Crashlytics – د کرش راپورونو لپاره</li>
+            </ul>
+            <p>دغه خدمتونه ممکن یوازې غیر شخصي معلومات راټول کړي.</p>
+
+            <h2>۵. د معلوماتو امنیت</h2>
+            <p>ځکه چې موږ حساس معلومات نه ساتو، د افشا کېدو خطر ډېر ټیټ دی.</p>
+
+            <h2>۶. د ماشومانو محرمیت</h2>
+            <p>{{APP}} د ۱۳ کلونو څخه کم عمر ماشومانو لپاره نه دی جوړ شوی.</p>
+
+            <h2>۷. بدلونونه</h2>
+            <p>که چېرې دا تګلاره بدله شي، نیټه به په همدې پاڼه کې تازه شي.</p>
+
+            <div class="contact-info">
+                <h2>۸. اړیکه</h2>
+                <p>که کومه پوښتنه لرئ، له موږ سره په لاندې ایمیل اړیکه ونیسئ:</p>
+                <p><strong>ایمیل:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+            </div>
+`
+  },
+  "tr": {
+    label: "Türkçe",
+    dir: "ltr",
+    title: "Gizlilik Politikası",
+    updated: "Son Güncelleme: 15 Kasım 2025",
+    body: `
+<h2>1. Toplamadığımız Bilgiler</h2>
+    <p>{{APP}} aşağıdaki bilgileri asla toplamaz veya saklamaz:</p>
+    <ul>
+        <li>Tarayıcı geçmişiniz</li>
+        <li>DNS sorgularınız</li>
+        <li>Bağlantı kayıtları (başlangıç, bitiş, süre)</li>
+        <li>Gerçek IP adresiniz veya atanmış IP adresi</li>
+        <li>Online aktiviteleriniz</li>
+        <li>İsim, e-posta, telefon gibi kimlik bilgileri</li>
+    </ul>
+
+    <p>Tüm DNS işlemleri tamamen cihazınızın içinde gerçekleşir ve hiçbir veri sunucularımıza gönderilmez.</p>
+
+    <h2>2. Otomatik Toplanabilecek Bilgiler</h2>
+    <ul>
+        <li>Cihaz bilgileri (model, işletim sistemi)</li>
+        <li>Uygulama çökmelerine dair anonim veriler (Firebase Crashlytics)</li>
+        <li>Basit uygulama olayları (VPN başlatıldı/durduruldu)</li>
+    </ul>
+
+    <h2>3. Bilgilerin Kullanımı</h2>
+    <p>Topladığımız sınırlı anonim bilgiler yalnızca:</p>
+    <ul>
+        <li>Uygulama performansını geliştirmek</li>
+        <li>Hataları tespit edip düzeltmek</li>
+        <li>Stabiliteyi artırmak</li>
+    </ul>
+
+    <h2>4. Üçüncü Taraf Hizmetleri</h2>
+    <p>Uygulama şu üçüncü taraf hizmetlerini kullanır:</p>
+    <ul>
+        <li>Google AdMob – Reklamlar için</li>
+        <li>Firebase Crashlytics – Çökme raporları için</li>
+    </ul>
+
+    <h2>5. Veri Güvenliği</h2>
+    <p>Hiçbir hassas veri tutulmadığından, veri ihlali riski son derece düşüktür.</p>
+
+    <h2>6. Çocukların Gizliliği</h2>
+    <p>Uygulama 13 yaş altındaki çocuklar için tasarlanmamıştır.</p>
+
+    <h2>7. Değişiklikler</h2>
+    <p>Bu politika zaman zaman güncellenebilir. Değişiklikler bu sayfada yayınlanır.</p>
+
+    <div class="contact-info">
+        <h2>8. İletişim</h2>
+        <p>Herhangi bir sorunuz varsa bizimle iletişime geçebilirsiniz:</p>
+        <p><strong>E-posta:</strong> <a href="mailto:frozanapps@gmail.com">frozanapps@gmail.com</a></p>
+`
+  },
+};
+
+var params = new URLSearchParams(location.search);
+var appKey = (params.get('app') || '').toLowerCase();
+if (!APPS[appKey]) appKey = 'vpn';
+
+function pickLang() {
+  var q = (params.get('lang') || '').toLowerCase().split('-')[0];
+  if (DOCS[q]) return q;
+  var nav = (navigator.language || 'en').toLowerCase().split('-')[0];
+  if (DOCS[nav]) return nav;
+  return 'en';
+}
+
+function render(code) {
+  var doc = DOCS[code] || DOCS.en;
+  var app = APPS[appKey];
+
+  document.documentElement.lang = code;
+  document.documentElement.dir = doc.dir;
+  document.title = app.name + ' - ' + doc.title.replace('&amp;', '&');
+  document.getElementById('logo').src = app.logo;
+  document.getElementById('logo').alt = app.name;
+  document.getElementById('doc-title').innerHTML = doc.title;
+  document.getElementById('last-updated').textContent = doc.updated;
+
+  var body = doc.body.replace('{{TECH}}', doc.tech ? doc.tech[appKey] : '');
+  document.getElementById('content').innerHTML = body.split('{{APP}}').join(app.name);
+}
+
+var select = document.getElementById('lang-select');
+Object.keys(DOCS).forEach(function (code) {
+  var o = document.createElement('option');
+  o.value = code; o.textContent = DOCS[code].label;
+  select.appendChild(o);
+});
+
+var current = pickLang();
+select.value = current;
+select.addEventListener('change', function () {
+  current = select.value;
+  params.set('lang', current);
+  history.replaceState(null, '', location.pathname + '?' + params.toString());
+  render(current);
+});
+render(current);
+</script>
+</body>
+</html>
